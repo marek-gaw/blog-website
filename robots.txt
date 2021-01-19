@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /images
 
 
-Sitemap: https://marek-gaw.bitbucket.io/sitemap.xml
+Sitemap: https://marek-gaw.github.io/sitemap.xml
