@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="" />
+<meta name="keywords" content="Kafka, BigData">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Stacja IT: Apache Kafka"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../drafts/stacjait-apache-kafka.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-02-16 08:47:00+01:00"/>
+<meta property="article:modified_time" content="2020-02-16 08:47:00+01:00"/>
+<meta property="article:author" content="../author/marek-gawryszewski.html">
+<meta property="article:section" content="Programming"/>
+<meta property="article:tag" content="Kafka"/>
+<meta property="article:tag" content="BigData"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Stacja IT: Apache Kafka</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="..">
+        <img src="../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="stacjait-apache-kafka">Stacja IT: Apache Kafka</h1>
+    <p>
+      Posted on nie 16 lutego 2020 in <a href="../category/programming.html">Programming</a>
+
+        &#8226; 3 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1 id="uwagi">Uwagi<a class="headerlink" href="#uwagi" title="Permanent link">&para;</a></h1>
+<ul>
+<li>CLI w terminator - dwa okna</li>
+<li>Projekt z Mavenem, żeby nie trzeba było jebać się z konfiguracją projektu</li>
+<li>jakie jest zadanie do każdego ćwiczenia?</li>
+</ul>
+<p>Zaczęło się od zapytań w stylu klient-serwer. 
+Potem poszliśmy do Batch processing.
+A potem zrobił się śmietnik.</p>
+<p>To co wchodzi do topika jest niemutowalne w samym topiku, można pobrać, zmienić i wysłać do nowego tpika</p>
+<p>skalowalność in mind.
+Partycja jest podstawowym pojęciem.
+Partycja nie jest replikacją.</p>
+<p>Klaster zarządza brokerami: kluster mówi klientowi, do którego borkera trzeba się podpiąć, żeby dostać dane, których się potrzebuje.</p>
+<p>Partycje mogą być rozrzucone po dostepnych brokerach (np. ten sam topik może mieć każdą partycję na innym brokerze)</p>
+<h2 id="zadanie-0">Zadanie 0<a class="headerlink" href="#zadanie-0" title="Permanent link">&para;</a></h2>
+<p>Odpalić docker compose, żeby postawić zookepera i Kafkę:</p>
+<p><a href="docker-compose.yml">https://github.com/confluentinc/cp-docker-images/blob/5.3.1-post/examples/kafka-single-node/docker-compose.yml</a></p>
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/confluentinc/cp-docker-images/5.3.1-post/examples/kafka-single-node/docker-compose.yml
+docker-compose up
+docker ps
+docker <span class="nb">exec</span> -it &lt;kafka_id&gt; /bin/bash
+
+<span class="c1"># w kontenerze</span>
+kafka-console-producer
+
+<span class="c1"># lista topików</span>
+kafka-topics --bootstrap-server localhost:9092 --list
+
+<span class="c1"># stworzenie nowego topika</span>
+kafka-topics --bootstrap-server localhost:9092 --create --topic my-first-topic
+
+<span class="c1"># topik faktycznie się stworzył. Partycja domyślnie na 1</span>
+root@b4af8c18ab82:/# kafka-topics --bootstrap-server localhost:9092 --list
+__confluent.support.metrics
+my-first-topic
+
+<span class="c1"># ręcznie podana liczba partycji i replikacja</span>
+kafka-topics --bootstrap-server localhost:9092 --create --topic my-first-topic --partitions <span class="m">3</span> -- repolication-factor <span class="m">1</span>
+
+<span class="c1"># usunięcie topika</span>
+kafka-topics --bootstrap-server localhost:9092 --delete --topic my-first-topic
+</code></pre></div>
+
+
+<p>Uwagi:
+- Isr - &ldquo;in synchronization&rdquo; - czy replika jest zsynchronizowana</p>
+<p>Problemiki:</p>
+<ul>
+<li>Docker nie mógł się podpiąć do sieci, brakowało mi konfiguacji użytkownika przy świerzej instalacji.
+Rozwiązanie: https://github.com/docker/compose/issues/6677</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo usermod -aG docker <span class="nv">$USER</span>
+sudo chmod <span class="m">755</span> -R .
+</code></pre></div>
+
+
+<h2 id="zadanie-1">Zadanie 1<a class="headerlink" href="#zadanie-1" title="Permanent link">&para;</a></h2>
+<p>Kolejnośc komunikatów między partycjami nie jest gwarantowana
+Żeby zapewnić kolejnosć między partycjami, trzeba ustawić klucz. 
+gwarantowana jest tylko kolejność w ramach partycji.
+Identyczny klucz dla wiadomości oznacza, że komunikat trafi na tą samą partycję.
+Klucza nie ustawia się, jak nie ma znaczenia kolejność chronologiczna.</p>
+<p>Z punktu widzenia Consumera:
+Proces ktory oczytuje z Kafki odczytuje z topika i wie, z której partycji ma czytać.
+Konsumenci mogą czytać z tego samego topika, ale z innych partycji.
+Odczyt jest FIFO</p>
+<p><em>Consumer Group</em>: każdy konsument w grupie będize czytać z innej partycji kafkowej. Jeden proces w grupie czyta wszystkie partycje.
+Dwóch konsumentów w grupie, pierwszy czyta pierwszą partycję, drugi pozostałe.
+Zastosowanie: skalowalność. Jeden konsument bedzie wąskim gardłem, bo wszystko idzie do niejgo, jak jest więcej konsumentów to mamy więcej procesów, można zrównoleglić odczyt. I konsument może być rozproszony. I jeszcze w ramach grupy mamy zachowaną kolejność w ramach grupy.
+Jak konsumetów w grupie jest tyle ile partycji, to jest optymalnie. Jak jest więcej konsumentów niż partycji, to jeden konsument jest niekatywny (nic do niego nie dotrze). To jest use case dla backupu konsumentów, ale to jest żadko. Rule of thumb liczba partycji == liczba konsumentów</p>
+<p><em>Offset</em>: klient informuje co odczytał</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># wysyłamy wiadomość na nieistniejący topik</span>
+
+<span class="c1"># odczyt</span>
+ kafka-console-consumer --bootstrap-server localhost:9092 --topic my-first-topic
+
+ <span class="c1"># nie odycztał nic, bo domyślnie czyta od uruchomienia procesu.</span>
+ <span class="c1"># no to podłączmy się jeszcze jednym terminalem do kontenera</span>
+ kafka-console-producer --broker-list localhost:9092 --topic my-first-topic --producer-property <span class="nv">acks</span><span class="o">=</span>all
+
+<span class="c1"># i teraz widać co wysyłam, konsumer odbiera</span>
+
+<span class="c1"># nowy konsument konsolowy to nowa Consumer Group</span>
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning
+<span class="c1"># odczytało wszystko od początku</span>
+
+<span class="c1"># Sprawdźmy listę grup</span>
+root@b4af8c18ab82:/# kafka-consumer-groups --bootstrap-server localhost:9092 --list
+console-consumer-15775
+console-consumer-90618
+
+<span class="c1"># weźmy jedno z id i posłączmy się konsumentem do niego</span>
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning --group console-consumer-90618
+<span class="c1"># bierzemy wszystko od początku, ale teraz istotne jest czy ta consumer group ma przesunięty offset do ostatniej wiadomości</span>
+
+<span class="c1"># komitowanie jest na grupę. Jak się nie doda --from-begining to commit jest ustawiany na bieżącą wiadomość</span>
+
+<span class="c1"># a teraz dodajmy się do Consumer Group</span>
+
+<span class="c1"># co jest z grupą?</span>
+root@b4af8c18ab82:/# kafka-consumer-groups --bootstrap-server localhost:9092 --group console-consumer-15775 --describe
+
+Consumer group <span class="s1">&#39;console-consumer-15775&#39;</span> has no active members.
+
+GROUP                  TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID     HOST            CLIENT-ID
+console-consumer-15775 my-first-topic  <span class="m">0</span>          <span class="m">8</span>               <span class="m">11</span>              <span class="m">3</span>               -               -               -
+root@b4af8c18ab82:/# 
+
+
+<span class="c1"># topic z większą liczbą partycji</span>
+</code></pre></div>
+
+
+<p>Opcja &ndash;dry-run sprawdza poprawność tego, co chcę zrobić.</p>
+<h1 id="konfiguracja-producenta">Konfiguracja Producenta<a class="headerlink" href="#konfiguracja-producenta" title="Permanent link">&para;</a></h1>
+<p>Broker może potwierdzać.
+- ACK= none
+Producent nie oczekuje potwierdzenia z Kafki, czy się udało. Wysyłanie jest jednokrotne, bez potwierdzenia. 
+Taki producer jest trochę szybszy (bo nie ma komunikacji z potwierdzeniem)
+- ACK = 1
+Lider danej repliki odpowiada, że dostał. Nie potwierdzamy, że nastąpiła replikacja na kolejne repliki. Replikacja jest asynchroniczna. Jak lider padnie przed repliką to dane tracimy
+- ACK=all
+Lider nie odpowaida producentowi dopóki wszystkie repliki nie potwierdzą, że dane zostały zreplikowane. Opcja jest najbardziej bezpieczna, do utraty danych potrzebne by była awarai wszystkich replik. Wydajność nieco spada, bo jest komunikacja między brokerami.</p>
+<p>Trzeba znaleźc kompromis między bezpieczeństwem a wydajnością</p>
+<p>min.insync.replicas - taka ilośc replik musi istnieć, żeby ACK=all potwierdziło (są w stanie ISR, łącznie z liderem)</p>
+<p>Mając 3 brokery:
+replication.factor=3
+min.insync-replicas=2 (broker)
+acks=all  (producer)
+Tolerancja tylko jednego niesprawnego brokera, w innym wypadku producer otrzyma wyjątek NOT_ENOUGH_REPLICAS</p>
+<p>brakuje w pom.xml</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.slf4j<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>slf4j-simple<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.7.21<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../tag/kafka.html">Kafka</a>
+      <a href="../tag/bigdata.html">BigData</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

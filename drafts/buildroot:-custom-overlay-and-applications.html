@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="" />
+<meta name="keywords" content="">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Buildroot: custom overlay and applications"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../drafts/buildroot:-custom-overlay-and-applications.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-12-12 21:24:00+01:00"/>
+<meta property="article:modified_time" content="2020-12-12 21:24:00+01:00"/>
+<meta property="article:author" content="../author/marek-gawryszewski.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Buildroot: custom overlay and applications</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="..">
+        <img src="../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="buildroot:-custom-overlay-and-applications">Buildroot: custom overlay and applications</h1>
+    <p>
+      Posted on sob 12 grudnia 2020 in <a href="../category/misc.html">misc</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h3 id="what-is-an-overlay">What is an overlay?<a class="headerlink" href="#what-is-an-overlay" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-configure-buildroot">How to configure Buildroot?<a class="headerlink" href="#how-to-configure-buildroot" title="Permanent link">&para;</a></h3>
+<p>There are two methods to provide overlay</p>
+<p>make menuconfig</p>
+<p>System configuration
+Root FS skeleton set to: custom target skeleton</p>
+<p>new option: () custom target skeleton path (NEW) -&gt; add path to the root of overlay here</p>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/maximeh/buildroot/blob/master/docs/manual/customize-rootfs.txt"></a></li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

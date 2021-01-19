@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="Short instruction, how to create minimal Linux system for Wandboard." />
+<meta name="keywords" content="Wandboard, Buildroot">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Buildroot for Wandboard"/>
+<meta property="og:description" content="Short instruction, how to create minimal Linux system for Wandboard."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2020/12/buildroot-for-wandboard.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-12-10 18:30:00+01:00"/>
+<meta property="article:modified_time" content="2020-12-10 18:30:00+01:00"/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Embedded"/>
+<meta property="article:tag" content="Wandboard"/>
+<meta property="article:tag" content="Buildroot"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Buildroot for Wandboard</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="buildroot-for-wandboard">Buildroot for Wandboard</h1>
+    <p>
+      Posted on czw 10 grudnia 2020 in <a href="../../../category/embedded.html">Embedded</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p><a href="https://buildroot.org/">Buildroot</a> is an open source tool, used to generate complete Linux system. It is mailny used to handle embedded systems.</p>
+<p>As for today, the most recent, stable version is 2020.02.8.</p>
+<p>Let&rsquo;s download it and prepare configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># download archive</span>
+❯ wget https://buildroot.org/downloads/buildroot-2020.02.8.tar.gz
+
+<span class="c1"># untar downloaded archive</span>
+❯ tar zxvf ./buildroot-2020.02.8.tar.gz
+❯ <span class="nb">cd</span> buildroot-2020.02.8
+</code></pre></div>
+
+
+<p>I want to create setup for <a href="https://www.wandboard.org/">Wandboard</a>. I can create whole setup from scratch, or use predefined, minimal setup. Since I want to proceed straight to the point, I decided to use predefined setup:</p>
+<div class="highlight"><pre><span></span><code>❯ make wandboard_defconfig
+</code></pre></div>
+
+
+<p>Side note: Buildroot has default config for many boards (including Raspberry Pi and any popular board, available on the market). Parameters for command above can be found with:</p>
+<div class="highlight"><pre><span></span><code>❯ grep -irns <span class="s2">&quot;wand&quot;</span> <span class="p">|</span> grep defconfig
+wandboard/readme.txt:7:    $ make wandboard_defconfig
+</code></pre></div>
+
+
+<p>The same, for <a href="https://beagleboard.org/black">BeagleBone Black</a>:</p>
+<div class="highlight"><pre><span></span><code>❯ grep -irns <span class="s2">&quot;beaglebone&quot;</span> <span class="p">|</span> grep defconfig
+beagleboneai/readme.txt:14:    $ make beagleboneai_defconfig
+beaglebone/readme.txt:13:For Qt5 support support use the beaglebone_qt5_defconfig.
+beaglebone/readme.txt:19:$ make beaglebone_defconfig
+</code></pre></div>
+
+
+<p>This means, that Buildroot provides support for BeagleBone Black and BeagleBone AI.</p>
+<p>If there is a need for inspection of default values, use menuconfig for that:</p>
+<div class="highlight"><pre><span></span><code>❯ make menuconfig
+</code></pre></div>
+
+
+<p>or, if you prefer X-Window configurator:</p>
+<div class="highlight"><pre><span></span><code>❯ make xconfig
+</code></pre></div>
+
+
+<p>Finally, build system with simple:</p>
+<div class="highlight"><pre><span></span><code>❯ make
+</code></pre></div>
+
+
+<p>After couple of minutes (more likey 30 rather than 5&hellip;):</p>
+<div class="highlight"><pre><span></span><code>❯ ll utput/images
+
+razem 61M
+-rw-r--r-- <span class="m">1</span> marek marek  35K gru <span class="m">10</span> <span class="m">19</span>:39 imx6dl-wandboard.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  35K gru <span class="m">10</span> <span class="m">19</span>:39 imx6dl-wandboard-revb1.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  37K gru <span class="m">10</span> <span class="m">19</span>:39 imx6dl-wandboard-revd1.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  39K gru <span class="m">10</span> <span class="m">19</span>:39 imx6qp-wandboard-revd1.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  37K gru <span class="m">10</span> <span class="m">19</span>:39 imx6q-wandboard.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  37K gru <span class="m">10</span> <span class="m">19</span>:39 imx6q-wandboard-revb1.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  38K gru <span class="m">10</span> <span class="m">19</span>:39 imx6q-wandboard-revd1.dtb
+-rw-r--r-- <span class="m">1</span> marek marek  60M gru <span class="m">10</span> <span class="m">19</span>:39 rootfs.ext2
+lrwxrwxrwx <span class="m">1</span> marek marek   <span class="m">11</span> gru <span class="m">10</span> <span class="m">19</span>:39 rootfs.ext4 -&gt; rootfs.ext2
+-rw-r--r-- <span class="m">1</span> marek marek  15M gru <span class="m">10</span> <span class="m">19</span>:39 rootfs.tar
+-rw-r--r-- <span class="m">1</span> marek marek  61M gru <span class="m">10</span> <span class="m">19</span>:39 sdcard.img
+-rw-r--r-- <span class="m">1</span> marek marek  47K gru <span class="m">10</span> <span class="m">19</span>:18 SPL
+-rwxr-xr-x <span class="m">1</span> marek marek 350K gru <span class="m">10</span> <span class="m">19</span>:18 u-boot.bin
+-rw-r--r-- <span class="m">1</span> marek marek 350K gru <span class="m">10</span> <span class="m">19</span>:18 u-boot.img
+-rw-r--r-- <span class="m">1</span> marek marek <span class="m">8</span>.2M gru <span class="m">10</span> <span class="m">19</span>:39 zImage
+</code></pre></div>
+
+
+<p>Write image to SD card (please mind your destination device, you can destroy your data here!)</p>
+<div class="highlight"><pre><span></span><code>❯ dd <span class="k">if</span><span class="o">=</span>output/images/sdcard.img <span class="nv">of</span><span class="o">=</span>/dev/mmcblk <span class="nv">bs</span><span class="o">=</span>1M
+</code></pre></div>
+
+
+<p>System is ready to boot!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/wandboard.html">Wandboard</a>
+      <a href="../../../tag/buildroot.html">Buildroot</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

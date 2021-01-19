@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff - Embedded</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/embedded.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2020-12-10T18:30:00+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Buildroot for Wandboard</title><link href="https://marek-gaw.github.io/blog/2020/12/buildroot-for-wandboard.html" rel="alternate"></link><published>2020-12-10T18:30:00+01:00</published><updated>2020-12-10T18:30:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-12-10:/blog/2020/12/buildroot-for-wandboard.html</id><summary type="html">&lt;p&gt;Short instruction, how to create minimal Linux system for Wandboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://buildroot.org/"&gt;Buildroot&lt;/a&gt; is an open source tool, used to generate complete Linux system. It is mailny used to handle embedded systems.&lt;/p&gt;
+&lt;p&gt;As for today, the most recent, stable version is 2020.02.8.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s download it and prepare configuration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# download archive&lt;/span&gt;
+❯ wget https://buildroot.org/downloads/buildroot-2020.02.8.tar.gz
+
+&lt;span class="c1"&gt;# untar downloaded archive&lt;/span&gt;
+❯ tar zxvf ./buildroot-2020.02.8.tar.gz
+❯ &lt;span class="nb"&gt;cd&lt;/span&gt; buildroot-2020.02.8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I want to create setup for &lt;a href="https://www.wandboard.org/"&gt;Wandboard&lt;/a&gt;. I can create whole setup from scratch, or use predefined, minimal setup. Since I want to proceed straight to the point, I decided to use predefined setup:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make wandboard_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Side note: Buildroot has default config for many boards (including Raspberry Pi and any popular board, available on the market). Parameters for command above can be found with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ grep -irns &lt;span class="s2"&gt;&amp;quot;wand&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep defconfig
+wandboard/readme.txt:7:    $ make wandboard_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The same, for &lt;a href="https://beagleboard.org/black"&gt;BeagleBone Black&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ grep -irns &lt;span class="s2"&gt;&amp;quot;beaglebone&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep defconfig
+beagleboneai/readme.txt:14:    $ make beagleboneai_defconfig
+beaglebone/readme.txt:13:For Qt5 support support use the beaglebone_qt5_defconfig.
+beaglebone/readme.txt:19:$ make beaglebone_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This means, that Buildroot provides support for BeagleBone Black and BeagleBone AI.&lt;/p&gt;
+&lt;p&gt;If there is a need for inspection of default values, use menuconfig for that:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make menuconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or, if you prefer X-Window configurator:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make xconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, build system with simple:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After couple of minutes (more likey 30 rather than 5&amp;hellip;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ ll utput/images
+
+razem 61M
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  35K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  35K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard-revb1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  39K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6qp-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard-revb1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  38K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  60M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.ext2
+lrwxrwxrwx &lt;span class="m"&gt;1&lt;/span&gt; marek marek   &lt;span class="m"&gt;11&lt;/span&gt; gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.ext4 -&amp;gt; rootfs.ext2
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  15M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.tar
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  61M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 sdcard.img
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  47K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 SPL
+-rwxr-xr-x &lt;span class="m"&gt;1&lt;/span&gt; marek marek 350K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 u-boot.bin
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek 350K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 u-boot.img
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek &lt;span class="m"&gt;8&lt;/span&gt;.2M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 zImage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Write image to SD card (please mind your destination device, you can destroy your data here!)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ dd &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;output/images/sdcard.img &lt;span class="nv"&gt;of&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/dev/mmcblk &lt;span class="nv"&gt;bs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1M
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;System is ready to boot!&lt;/p&gt;</content><category term="Embedded"></category><category term="Wandboard"></category><category term="Buildroot"></category></entry><entry><title>WF21090 on RPi3</title><link href="https://marek-gaw.github.io/blog/2017/03/wf21090-on-rpi3.html" rel="alternate"></link><published>2017-03-09T18:29:00+01:00</published><updated>2017-03-15T18:16:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-03-09:/blog/2017/03/wf21090-on-rpi3.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Virtually, the core of solution is described &lt;a href="https://ubuntuforums.org/showthread.php?t=2258715"&gt;here&lt;/a&gt; and &lt;a href="https://github.com/gnab/rtl8812au"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All steps below should be done on RPi (also compilation)!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install build-essential git
+git clone https://github.com/gnab/rtl8812au.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; rtl8812au
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, change line in Makefile, to compile module for RPi:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nano Makefile
+
+...
+&lt;span class="nv"&gt;CONFIG_PLATFORM_I386_PC&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; n
+...
+&lt;span class="nv"&gt;CONFIG_PLATFORM_ARM_RPI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then just compile and istall:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make
+sudo make install
+sudo modprobe 8812au
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As I bowsed thrugh the Internet, this should be sufficient in most cases.&lt;/p&gt;
+&lt;p&gt;But, obviously - not mine:-)&lt;/p&gt;
+&lt;p&gt;There are two possible problems, that have to be solved.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kernel headers. Raspbian or Ubuntu Mate (which I use) do not have kernel headers by default, so I had to install them manually. The key here is kernel version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uname -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Is your firend.&lt;/p&gt;
+&lt;p&gt;I tried to install packages like kernel-headers-generic but this didn&amp;rsquo;t provide right sources. I had to have specific version 4.19.v7+
+I found &lt;a href="http://raspberrypi.stackexchange.com/questions/28307/dwa-171-using-8812au-ko-does-not-seem-to-work-on-linux-kernel-version-3-18-8"&gt;this SO topic&lt;/a&gt; very useful: the key to success was to use rpi-source to get right kernel headers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GCC version. I had to install gcc-4.7, and compile my module with it.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Embedded"></category><category term="Raspberry Pi"></category><category term="WF21090"></category></entry><entry><title>Raspbian Jessie for Raspberry Pi 3</title><link href="https://marek-gaw.github.io/blog/2016/07/raspbian-jessie-for-raspberry-pi-3.html" rel="alternate"></link><published>2016-07-20T18:00:00+02:00</published><updated>2016-09-14T18:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-07-20:/blog/2016/07/raspbian-jessie-for-raspberry-pi-3.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo reboot
+sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+sudo apt-get install mplayer2 …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo reboot
+sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+sudo apt-get install mplayer2
+sudo apt-get install gstreamer1.0
+apt-get install libgstreamer1.0-0-dbg gstreamer1.0-tools libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad-dbg gstreamer1.0-omx gstreamer1.0-alsa
+sudo apt-get purge wolfram-engine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip opencv.zip
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+unzip opencv_contrib.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/opencv-3.1.0/
+mkdir build
+&lt;span class="nb"&gt;cd&lt;/span&gt; build
+cmake -D &lt;span class="nv"&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RELEASE &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;CMAKE_INSTALL_PREFIX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;INSTALL_C_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;OFF &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;INSTALL_PYTHON_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;OFF &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;OPENCV_EXTRA_MODULES_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;~/opencv_contrib-3.1.0/modules &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;BUILD_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ON ..
+
+make -j4
+sudo make install
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ../..
+mkdir OCV
+&lt;span class="nb"&gt;cd&lt;/span&gt; OCV
+nano ocv_test.cpp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;quot;opencv2/opencv.hpp&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;cv&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;OpenCV version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Major version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_MAJOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Minor version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_MINOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Subminor version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_SUBMINOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;CV_MAJOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="c1"&gt;// Old OpenCV 2 code goes here.&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="c1"&gt;// New OpenCV 3 code goes here.&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;g++ &lt;span class="sb"&gt;`&lt;/span&gt;pkg-config --cflags opencv&lt;span class="sb"&gt;`&lt;/span&gt; ocv_test.cpp &lt;span class="sb"&gt;`&lt;/span&gt;pkg-config --libs opencv&lt;span class="sb"&gt;`&lt;/span&gt; -o ocv_test
+ocv_test
+
+pi@raspberrypi:~/OCV $ ./ocv_test
+OpenCV version : &lt;span class="m"&gt;3&lt;/span&gt;.1.0
+Major version : &lt;span class="m"&gt;3&lt;/span&gt;
+Minor version : &lt;span class="m"&gt;1&lt;/span&gt;
+Subminor version : &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pi@raspberrypi:~/OCV $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  &lt;span class="m"&gt;6&lt;/span&gt;.6G  &lt;span class="m"&gt;6&lt;/span&gt;.0G  &lt;span class="m"&gt;53&lt;/span&gt;% /
+devtmpfs        459M     &lt;span class="m"&gt;0&lt;/span&gt;  459M   &lt;span class="m"&gt;0&lt;/span&gt;% /dev
+tmpfs           463M     &lt;span class="m"&gt;0&lt;/span&gt;  463M   &lt;span class="m"&gt;0&lt;/span&gt;% /dev/shm
+tmpfs           463M  &lt;span class="m"&gt;6&lt;/span&gt;.3M  457M   &lt;span class="m"&gt;2&lt;/span&gt;% /run
+tmpfs           &lt;span class="m"&gt;5&lt;/span&gt;.0M  &lt;span class="m"&gt;4&lt;/span&gt;.0K  &lt;span class="m"&gt;5&lt;/span&gt;.0M   &lt;span class="m"&gt;1&lt;/span&gt;% /run/lock
+tmpfs           463M     &lt;span class="m"&gt;0&lt;/span&gt;  463M   &lt;span class="m"&gt;0&lt;/span&gt;% /sys/fs/cgroup
+/dev/mmcblk0p6   63M   21M   43M  &lt;span class="m"&gt;33&lt;/span&gt;% /boot
+tmpfs            93M     &lt;span class="m"&gt;0&lt;/span&gt;   93M   &lt;span class="m"&gt;0&lt;/span&gt;% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="ros-indigo"&gt;ROS Indigo&lt;a class="headerlink" href="#ros-indigo" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Indigo%20on%20Raspberry%20Pi&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo sh -c &lt;span class="s1"&gt;&amp;#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu jessie main&amp;quot; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&amp;#39;&lt;/span&gt;
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - &lt;span class="p"&gt;|&lt;/span&gt; sudo apt-key add -
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
+sudo pip install rosdep rosinstall_generator wstool rosinstall
+sudo rosdep init
+rosdep update
+
+mkdir ~/ros_catkin_ws
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosinstall_generator ros_comm --rosdistro indigo --deps --wet-only --exclude roslisp --tar &amp;gt; indigo-ros_comm-wet.rosinstall
+wstool init src indigo-ros_comm-wet.rosinstall
+
+mkdir ~/ros_catkin_ws/external_src
+sudo apt-get install checkinstall cmake
+sudo sh -c &lt;span class="s1"&gt;&amp;#39;echo &amp;quot;deb-src http://mirrordirector.raspbian.org/raspbian/ testing main contrib non-free rpi&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&amp;#39;&lt;/span&gt;
+sudo apt-get update
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws/external_src
+sudo apt-get build-dep console-bridge
+apt-get &lt;span class="nb"&gt;source&lt;/span&gt; -b console-bridge
+sudo dpkg -i libconsole-bridge0.2*.deb libconsole-bridge-dev_*.deb
+
+apt-get &lt;span class="nb"&gt;source&lt;/span&gt; -b lz4
+sudo dpkg -i liblz4-*.deb
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:jessie
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;Release --install-space /opt/ros/indigo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt; /opt/ros/indigo/setup.bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;http://answers.ros.org/question/219575/raspberry-pi2-roscpp-failed-during-indigo-installation/
+CONF_SWAPSIZE=1024&lt;/p&gt;
+&lt;p&gt;liburdfdom-headers-dev:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;ros_catkin_ws&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;external_src&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ros&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;urdfdom_headers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;urdfdom_headers&lt;/span&gt;
+&lt;span class="n"&gt;cmake&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;checkinstall&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+
+   &lt;span class="k"&gt;When&lt;/span&gt; &lt;span class="k"&gt;check&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;asks&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;needs&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;urdfdom-headers&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;liburdfdom-headers-dev&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;otherwise&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;rosdep&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;wont&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;liburdfdom-dev:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;ros_catkin_ws&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;external_src&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;libboost&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libtinyxml&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ros&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;urdfdom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;urdfdom&lt;/span&gt;
+&lt;span class="n"&gt;cmake&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;checkinstall&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+
+
+&lt;span class="n"&gt;Adding&lt;/span&gt; &lt;span class="n"&gt;Released&lt;/span&gt; &lt;span class="n"&gt;Packages&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You may add additional packages to the installed ros workspace that have been released into the ros ecosystem. First, a new rosinstall file must be created including the new packages (Note, this can also be done at the initial install). For example, if we have installed ros_comm, but want to add ros_control and joystick_drivers, the command would be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosinstall_generator ros_comm ros_control joystick_drivers --rosdistro indigo --deps --wet-only --exclude roslisp --tar &amp;gt; indigo-custom_ros.rosinstall
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You may keep listing as many ROS packages as you&amp;rsquo;d like separated by spaces.&lt;/p&gt;
+&lt;p&gt;Next, update the workspace with wstool:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wstool merge -t src indigo-custom_ros.rosinstall
+wstool update -t src
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After updating the workspace, you may want to run rosdep to install any new dependencies that are required:&lt;/p&gt;
+&lt;p&gt;Raspbian Wheezy:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:wheezy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Raspbian Jessie:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:jessie
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, now that the workspace is up to date and dependencies are satisfied, rebuild the workspace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;Release --install-space /opt/ros/indigo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Embedded"></category><category term="Raspberry"></category><category term="Linux"></category></entry><entry><title>MAXimator - easy start with FPGA</title><link href="https://marek-gaw.github.io/blog/2016/03/maximator-easy-start-with-fpga.html" rel="alternate"></link><published>2016-03-17T10:05:59-01:00</published><updated>2016-03-17T10:05:59-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-03-17:/blog/2016/03/maximator-easy-start-with-fpga.html</id><summary type="html">&lt;p&gt;From time to time I think about getting familar with FPGA, but once I have checked prices of development boards, I gave up.&lt;/p&gt;
+&lt;p&gt;Few days ago on &lt;a class="reference external" href="http://mikrokontroler.pl"&gt;mikrokontroler.pl&lt;/a&gt; I found an information about development kit, that siuts my needs: it is based on FPGA, simple and cheap. A day …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From time to time I think about getting familar with FPGA, but once I have checked prices of development boards, I gave up.&lt;/p&gt;
+&lt;p&gt;Few days ago on &lt;a class="reference external" href="http://mikrokontroler.pl"&gt;mikrokontroler.pl&lt;/a&gt; I found an information about development kit, that siuts my needs: it is based on FPGA, simple and cheap. A day later it was on the way to me:-)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://maximator-fpga.org/"&gt;MAXimator&lt;/a&gt; is low price FPGA development board released recently by Kamami Labs in cooperation with EBVElektronik, NCAB Group, Altera and Semicon.&lt;/p&gt;
+&lt;p&gt;Drivef for USB Blaster had to be installed manually (available in Quartus folder under drivers/usb-blaster)&lt;/p&gt;
+&lt;p&gt;Top view&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/2.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Programator: USB Blaster - 'official' clone&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/1.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Heart of this development board: Altera MAX10 (10M08DAF256C8GES)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/3.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Expander by &lt;a class="reference external" href="https://kamami.com"&gt;Kamami&lt;/a&gt; with 4 7-segment LED, 2 push buttons and 2 WS1280 RGB LEDs&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/4.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Side view (with expander)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/5.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Bottom view (with expander). HDMI connector is visible&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/6.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Top view (with expander)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/7.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Whole setup, box&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/9.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;The board is programmed by default with exapmle, which uses most of features: LEDs, pusbuttons, VGA.&lt;/p&gt;
+&lt;p&gt;For now, I need to get familiar with VHDL, and go through Arduino shileds that I have, to check, which of them might be used with MAXimator (only ones supplied with 3V3).&lt;/p&gt;
+</content><category term="Embedded"></category><category term="DYI"></category><category term="FPGA"></category></entry><entry><title>QNX vs. Linux (part 1)</title><link href="https://marek-gaw.github.io/blog/2016/02/qnx-vs-linux-part-1.html" rel="alternate"></link><published>2016-02-06T11:11:15-01:00</published><updated>2016-02-06T11:11:15-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-02-06:/blog/2016/02/qnx-vs-linux-part-1.html</id><summary type="html">&lt;p&gt;Few days ago I saw post on LinkedIn, which redirected me to &lt;a class="reference external" href="http://jahoffmann.com/2016/02/03/whitepaper-total-cost-of-ownership-linux-vs-qnx-part1/"&gt;this post&lt;/a&gt; and finally, to &lt;a class="reference external" href="http://www.qnx.com/download/feature.html?programid=27444"&gt;this article&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;This article is a copmarision of two OSes, used in Automotive: QNX and Linux. There will be three parts: for now, only first was published.&lt;/p&gt;
+&lt;p&gt;I encourage everyone to read the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few days ago I saw post on LinkedIn, which redirected me to &lt;a class="reference external" href="http://jahoffmann.com/2016/02/03/whitepaper-total-cost-of-ownership-linux-vs-qnx-part1/"&gt;this post&lt;/a&gt; and finally, to &lt;a class="reference external" href="http://www.qnx.com/download/feature.html?programid=27444"&gt;this article&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;This article is a copmarision of two OSes, used in Automotive: QNX and Linux. There will be three parts: for now, only first was published.&lt;/p&gt;
+&lt;p&gt;I encourage everyone to read the document, it is available for free.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Linux"></category><category term="QNX"></category></entry><entry><title>Banana Pi M2 - first attempt</title><link href="https://marek-gaw.github.io/blog/2016/01/banana-pi-m2-first-attempt.html" rel="alternate"></link><published>2016-01-21T20:46:38-01:00</published><updated>2016-01-21T20:46:38-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-21:/blog/2016/01/banana-pi-m2-first-attempt.html</id><summary type="html">&lt;p&gt;Recently, I tried to make up and running brand new BananaPi M2.&lt;/p&gt;
+&lt;p&gt;My goal was to make dedicated camera (using CSI interface) work. TLDR: I have failed.&lt;/p&gt;
+&lt;p&gt;It looks like it is very important to distinct M2 version from BananaPi M1, plus or Pro. It seems that M2 is made …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I tried to make up and running brand new BananaPi M2.&lt;/p&gt;
+&lt;p&gt;My goal was to make dedicated camera (using CSI interface) work. TLDR: I have failed.&lt;/p&gt;
+&lt;p&gt;It looks like it is very important to distinct M2 version from BananaPi M1, plus or Pro. It seems that M2 is made by different company and for sure, it is not compatibile with older verisons. This was especially deceptive for me, because I have lost a lot of time until I finally figured it out.&lt;/p&gt;
+&lt;p&gt;It seems that there is no official Linux distribution, which will support all hardware on the board. I found some sane solutions like Armbian or Bananian, but they are still not considered as stable (at least by autors).&lt;/p&gt;
+&lt;p&gt;Installation of both is quite straight-forward: download, unzip, dd image on microSD card, and run. Simple, no magic here.&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.armbian.com/banana-pi-m2/"&gt;Armbian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.bananian.org/news#bananian_linux_for_banana_pi_m2_-_2015-12-23"&gt;Bananian&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bad news is that I haven't found a way to make camera work. From what I read, there is no hope, because support from manufactuer is bad or non-existent. Additionally, OV chip used in this camera is not supported by mainline Linux kernels.&lt;/p&gt;
+&lt;p&gt;All in all, I switched to ususal webcam, connected over USB.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="BananaPi"></category><category term="Armbian"></category><category term="Bananian"></category></entry><entry><title>How to control GPIOs on Raspberry Pi with console commands</title><link href="https://marek-gaw.github.io/blog/2015/11/how-to-control-gpios-on-raspberry-pi-with-console-commands.html" rel="alternate"></link><published>2015-11-15T18:36:19-01:00</published><updated>2015-11-15T18:36:19-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2015-11-15:/blog/2015/11/how-to-control-gpios-on-raspberry-pi-with-console-commands.html</id><summary type="html">&lt;p&gt;While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi).
+So, my first attempt was quite straight forward (you may find this solution …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi).
+So, my first attempt was quite straight forward (you may find this solution on the Internet):&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;bash&lt;/p&gt;
+&lt;p class="last"&gt;echo 18 &amp;gt; /sys/class/gpio/export
+echo out &amp;gt; /sys/class/gpio/gpio18/direction
+echo 1 &amp;gt; /sys/class/gpio/gpio18/value
+echo 0 &amp;gt; /sys/class/gpio/gpio18/value
+echo o18 &amp;gt; /sys/class/gpio/unexport&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Looks nice, right? Obviously, there is a catch: permissions. Everything was ok unless I tried to set value to 1: at this point, RPi decided to not cooperate and reject my kind request with &amp;quot;Permission denied&amp;quot;.&lt;/p&gt;
+&lt;p&gt;But then I have found post by user jojopi at raspberrypi.org (&lt;a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;amp;f=5"&gt;https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;amp;f=5&lt;/a&gt;) which led me to the right solution.&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;bash&lt;/p&gt;
+&lt;p class="last"&gt;sudo sh -c 'echo 18 &amp;gt; /sys/class/gpio/export'
+sudo sh -c 'echo out &amp;gt; /sys/class/gpio/gpio18/direction'
+sudo sh -c 'echo 1 &amp;gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo 0 &amp;gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo o18 &amp;gt; /sys/class/gpio/unexport'&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Tadaaaaa, it works.
+The catch is opeator &amp;quot;&amp;gt;&amp;quot; which looks like to be immune to sudo.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Raspberry Pi"></category><category term="Linux"></category><category term="Kernel"></category></entry></feed>

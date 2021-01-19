@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="./theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="I have taken Codility test - here are my thoughts about it." />
+<meta name="keywords" content="Codility, Recruitment">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Recruitment with Codility"/>
+<meta property="og:description" content="I have taken Codility test - here are my thoughts about it."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./blog/2018/03/recruitment-with-codility-EN.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-03-18 17:10:00+01:00"/>
+<meta property="article:modified_time" content="2018-03-18 17:10:00+01:00"/>
+<meta property="article:author" content="./author/marek-gawryszewski.html">
+<meta property="article:section" content="General"/>
+<meta property="article:tag" content="Codility"/>
+<meta property="article:tag" content="Recruitment"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Recruitment with Codility</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href=".">
+        <img src="./theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href=".">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="recruitment-with-codility">Recruitment with Codility</h1>
+    <p>
+      Posted on nie 18 marca 2018 in <a href="./category/general.html">General</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Recently I decided to take part in recruitment process for one of big companies in my area. One of process stages is to take part in <a href="https://app.codility.com/programmers/">Codility</a> contest.</p>
+<p>While I already made my assignment, I feel like I have an idea how to take part in such events&hellip;</p>
+<ol>
+<li>
+<p>Know your enemy</p>
+<p>There is no worse mistake in case of Codility test, than to not get familiar with the type of tasks to solve. Moreover, there are <a href="https://app.codility.com/programmers/lessons/1-iterations/">lessons</a> and <a href="https://app.codility.com/programmers/challenges/">challenges</a> which will show you, how the process works and, which is the vital part, what kind of tasks are there.</p>
+</li>
+<li>
+<p>Prepare IDE</p>
+<p><a href="https://app.codility.com/candidate-faq/">Official FAQ</a> states, that using of external IDE is allowed. From my point of view it is not even encouraged. It is obligatory. It is not only because of code completion, in my case, it was easier to debug my code with GDB than use std::cout (which is available at Codility).</p>
+</li>
+<li>
+<p>Get familiar with data structures and algorithms</p>
+<p>This is the main area of topics (at least ones I saw and I am aware of). During the test, there is no time to ask Google, how linked list works, this is what we should know already.</p>
+</li>
+<li>
+<p>Get familiar with your language</p>
+<p>This also seems obvious, but it is good to know gotchas, which our tools have: in case of C++, it is good to know and understand STL algorithms.</p>
+</li>
+<li>
+<p>Take demo test</p>
+<p>This is almost the same situation as we will have during real test: the time is constrained and our solution is assessed in the same way against correctness and performance.</p>
+</li>
+<li>
+<p>Practice, practice, practice</p>
+<p>There is no better way to learn how to solve puzzles than solving puzzles. I encourage everyone to solve some of available challenges to get familiar with the process, and to have an idea of what actual, &ldquo;real&rdquo; test will look like.</p>
+</li>
+</ol>
+<p>I don&rsquo;t feel like I was assessed extensively with Codility, or solving one or two riddles will show my ability to create good software. Anyway, this is a little bit better version of fizz-buzz test, originally proposed by Joel Spolsky on his <a href="https://blog.codinghorror.com/why-cant-programmers-program/">blog note: Why can&rsquo;t programmers program?</a> (I recommend to read other articles too!). So, I feel &ldquo;not-so-sure&rdquo; about Codility, but this is better way than white board programming, and if used as one of many, rather than only, step in recruitment process, it is good enough. </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/codility.html">Codility</a>
+      <a href="./tag/recruitment.html">Recruitment</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : ".",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

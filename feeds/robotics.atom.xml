@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff - Robotics</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/robotics.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2016-12-29T10:00:00+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>How to clone Raspberry Pi SD card</title><link href="https://marek-gaw.github.io/blog/2016/11/how-to-clone-raspberry-pi-sd-card.html" rel="alternate"></link><published>2016-11-12T10:00:00+01:00</published><updated>2016-11-12T10:00:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-11-12:/blog/2016/11/how-to-clone-raspberry-pi-sd-card.html</id><summary type="html">&lt;p&gt;The problem behind this post is: how can I share my Raspberry Pi system with others? Obvious answer is: let&amp;rsquo;s dd the SD card! Unfortunately, this MIGHT work if both cards are the same: same size and same manufacturer. &lt;/p&gt;
+&lt;p&gt;It would be too easy, if I had the same …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The problem behind this post is: how can I share my Raspberry Pi system with others? Obvious answer is: let&amp;rsquo;s dd the SD card! Unfortunately, this MIGHT work if both cards are the same: same size and same manufacturer. &lt;/p&gt;
+&lt;p&gt;It would be too easy, if I had the same SD card in my Raspberry than others in my team..&lt;/p&gt;
+&lt;p&gt;Finally, I figured out, that making bit-by-bit copy of SD card is not as good solution as I supposed it to be, and I need to copy partitions and file systems instead.&lt;/p&gt;
+&lt;p&gt;First of all, I need to work with fdisk:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/mmcblk0
+I
+
+fdisk /dev/mmcblk0
+O
+
+Disk /dev/mmcblk0: &lt;span class="m"&gt;14&lt;/span&gt;,5 GiB, &lt;span class="m"&gt;15523119104&lt;/span&gt; bytes, &lt;span class="m"&gt;30318592&lt;/span&gt; sectors
+Units: sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+I/O size &lt;span class="o"&gt;(&lt;/span&gt;minimum/optimal&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Disklabel type: dos
+Disk identifier: 0x580a66ff
+
+Urządzenie     Rozruch  Start   Koniec  Sektory  Size Id Typ
+/dev/mmcblk0p1 *         &lt;span class="m"&gt;2048&lt;/span&gt;   &lt;span class="m"&gt;133119&lt;/span&gt;   &lt;span class="m"&gt;131072&lt;/span&gt;   64M  c W95 FAT32 &lt;span class="o"&gt;(&lt;/span&gt;LBA&lt;span class="o"&gt;)&lt;/span&gt;
+/dev/mmcblk0p2         &lt;span class="m"&gt;133120&lt;/span&gt; &lt;span class="m"&gt;30318591&lt;/span&gt; &lt;span class="m"&gt;30185472&lt;/span&gt; &lt;span class="m"&gt;14&lt;/span&gt;,4G &lt;span class="m"&gt;83&lt;/span&gt; Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Some magic is required: remove ext4 partition, and create new one&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/mmcblk0
+d
+&lt;span class="m"&gt;2&lt;/span&gt;
+n - new partition
+p - primary
+default options
+w
+
+sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Remove card, insert card.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;losetup --partscan --find --show Rpi3_ROS_v1.1.img  
+
+sudo mount /dev/loop0p1 /mnt/pip1  
+sudo mount /dev/loop0p2 /mnt/pip2  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Partitions on new SD card should look like this:
+partition 1: FAT32, 2048-133119
+partition 2: ext4, the rest of space&lt;/p&gt;
+&lt;p&gt;After that, both partition should be formated and mounted (with i.e. gparted).&lt;/p&gt;
+&lt;p&gt;Here is the magic:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo rsync -rltzuv --progress /mnt/pip1 /media/marek/06ead7c6-62ae-46b0-882b-eddab4de7d74
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After some time, we get 1-1 copy of SD card.&lt;/p&gt;</content><category term="Robotics"></category><category term="Raspberry"></category></entry><entry><title>ROS Kinetic and V-REP 3.3.2</title><link href="https://marek-gaw.github.io/blog/2016/09/ros-kinetic-and-v-rep-3.3.2.html" rel="alternate"></link><published>2016-09-19T18:35:00+02:00</published><updated>2016-09-19T18:35:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-09-19:/blog/2016/09/ros-kinetic-and-v-rep-3.3.2.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I wanted to connect my V-REP simulation to ROS. Obviously, since Kinetic anything is simple, so I had to go through some steps, to make it work.&lt;/p&gt;
+&lt;p&gt;There is always &lt;a href="http://wiki.ros.org/vrep_ros_bridge"&gt;vrep_ros_bridge&lt;/a&gt; page, but for now there is no information about migration to Kinetic.Anyway, &lt;a href="https://github.com/lagadic/vrep_ros_bridge"&gt;this tutorial on GitHub&lt;/a&gt; seems to be up-to-date, and most of steps are the same/similiar to what I described below.&lt;/p&gt;
+&lt;p&gt;I assume, that ROS workspace is already created in ~/ROS/ws_vrep.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We need to grab the code:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; src
+git clone https://github.com/lagadic/vrep_ros_bridge.git
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It is better to checkout on master rather than *-devel branch, as they seem to be dedicated to different ROS distribution.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install V-REP &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We need to have our V-REP unpacked somewhere and create env with path:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VREP_ROOT_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&amp;lt;path_to_vrep_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Install gazebo messages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-gazebo-msgs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Supress Telekyb by creating CATKIN_IGNORE file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;vrep_ros_bridge was designed to simulate quadrocopter with Telekyb controller. Since this is not relevant, it is better to tell CMake to ignore it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; src/vrep_ros_bridge/quadrotor_tk_hander
+touch CATKIN_IGNORE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Stop! Catkin time!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;One important info: if workspace was already initialized by catkin_make, it has to be deleted (devel directory) and initialized again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python-catkin-tools
+&lt;span class="nb"&gt;source&lt;/span&gt; /opt/ros/kinetic/setup.bash
+&lt;span class="o"&gt;[&lt;/span&gt;in ROS/ws_vrep&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;source&lt;/span&gt; devel/setup.bash
+catkin build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Almost there: building vrep_ros_bridge&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;catkin build --no-deps vrep_ros_bridge --cmake-args -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;RelWithDebInfo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Needed symboilc links&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Obviously, &amp;hellip; has to be replaced by proper path.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ln -s /home/.../ROS/ws_vrep/devel/lib/libv_repExtRosBridge.so /home/.../V-REP_PRO_EDU_V3_3_2_64_Linux
+ln -s compiledRosPlugins/libv_repExtRos.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Official VREP tutorial advises to copy files, but I prefer to symlink them.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First crash&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sorry, for me first run was crash.
+Plugin cant be loaded, so I checked out what was happening&amp;hellip; Error message told me that there is no boost_system library - which was obviously not true. To solve this, I just need to compile RosInterface and RosPlugin in Vrep by myself. Easy? Easy.&lt;/p&gt;
+&lt;p&gt;Code is in vrep/programming/ros_packages.&lt;/p&gt;
+&lt;p&gt;compilation process is described at &lt;a href="http://www.coppeliarobotics.com/helpFiles/en/rosTutorialIndigo.htm"&gt;Coopelia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I prefer to make symlinks instead of copying files, so at the end I just made symliks for libv_repExtRos.so and libv_repExtRosInterface.so&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It still does not work? Is vrep_bridge_plugin package installed in ros?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt; /ROS/ws_vrep/devel/setup.bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Thanks to this, ROS-specific envs are set, so V-REP can start and run ROS-enabled simulation.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a dirty trick, but untill I will find how to install package with catkin build&lt;/p&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="V-REP"></category></entry><entry><title>LabVIEW - ROS communication</title><link href="https://marek-gaw.github.io/blog/2016/09/labview---ros-communication.html" rel="alternate"></link><published>2016-09-17T12:56:00+02:00</published><updated>2016-12-29T10:00:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-09-17:/blog/2016/09/labview---ros-communication.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Finally, I have created working proof of concept of working bridge between ROS and LabVIEW.&lt;/p&gt;
+&lt;p&gt;It is not perfect - it parses only limited set of ROS messages and because of that, it cannot be called &amp;ldquo;universal solution&amp;rdquo;. For me it was good enough to make communication between myRIO with LabVIEW app and ROS on desktop.&lt;/p&gt;
+&lt;p&gt;Project can be found on my &lt;a href="https://github.com/marek-gaw/lv-ros-bridge"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><category term="Robotics"></category><category term="LabVIEW"></category><category term="ROS"></category></entry><entry><title>Quick Tip: How to setup rosbridge</title><link href="https://marek-gaw.github.io/blog/2016/08/quick-tip-rosbridge-setup.html" rel="alternate"></link><published>2016-08-24T20:27:00+02:00</published><updated>2016-08-24T20:27:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-24:/blog/2016/08/quick-tip-rosbridge-setup.html</id><summary type="html"></summary><content type="html">&lt;p&gt;For last 3 days I tried to establish communication between ROS node and non-ROS application - in my case it was Python app.
+I was able to publish data to topic, but I was not able to receive any, despite of the fact, that rosbridge server accepted my request to subscribe to topic.&lt;/p&gt;
+&lt;p&gt;Finally, I found the solution in ![this topic on ROS Answers]. Basically, the problem is that, during rosbridge installation I have installed bson packet with pip. But I HAVE TO HAVE version from MongoDB package! So, basically&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip uninstall bson
+pip -m install pymongo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&amp;hellip;fixed my problem. &lt;/p&gt;
+&lt;p&gt;![this topic on ROS Answers]: https://answers.ros.org&lt;/p&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="rosbridge"></category></entry><entry><title>Camera in ROS Kinetic</title><link href="https://marek-gaw.github.io/blog/2016/08/camera-in-ros-kinetic.html" rel="alternate"></link><published>2016-08-20T18:24:00+02:00</published><updated>2016-08-20T18:24:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-20:/blog/2016/08/camera-in-ros-kinetic.html</id><summary type="html"></summary><content type="html">&lt;p&gt;How to make camera work in ROS Kinetic?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kientic-image-pipeline
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will install package &lt;a href="http://wik.ros.org/image-pipeline"&gt;image_pipeline&lt;/a&gt; which contains useful things.
+What we actually need is package image_view.&lt;/p&gt;
+&lt;p&gt;Second thing is usb_cam.
+Obviously, this one is not included in Kinetic&amp;hellip; So, we have to build it on our own.&lt;/p&gt;
+&lt;p&gt;So, lets compile usb_cam!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/bosch-ros-pkg/usb_cam.git
+catkin_make
+catkin_make -install
+roslaunch usb_cam usb_cam-test.launch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Robotics"></category><category term="ROS"></category></entry><entry><title>ros_bridge and LabVIEW</title><link href="https://marek-gaw.github.io/blog/2016/08/ros_bridge-and-labview.html" rel="alternate"></link><published>2016-08-04T18:00:00+02:00</published><updated>2016-09-14T18:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-04:/blog/2016/08/ros_bridge-and-labview.html</id><summary type="html">&lt;p&gt;For now, rosbridge is not available as .deb package, so I need to compile it by myself.&lt;/p&gt;
+&lt;p&gt;Rosbridge can be cloned from GitHub:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/RobotWebTools/rosbridge_suite.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is a dependency with package &lt;em&gt;rosauth&lt;/em&gt; - this package also needs to be compiled manually.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;For now, rosbridge is not available as .deb package, so I need to compile it by myself.&lt;/p&gt;
+&lt;p&gt;Rosbridge can be cloned from GitHub:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/RobotWebTools/rosbridge_suite.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is a dependency with package &lt;em&gt;rosauth&lt;/em&gt; - this package also needs to be compiled manually.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/GT-RAIL/rosauth.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;What I found interesting, there is a dependency with Python package &lt;em&gt;bson&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip2 install bson
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I had to use pip2 explicitly as I have Python3 installed among Python2 on my laptop.&lt;/p&gt;
+&lt;p&gt;Basically, usual catkin build is sufficient to build both packages and run rosbridge server.&lt;/p&gt;
+&lt;h3 id="update"&gt;Update&lt;a class="headerlink" href="#update" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Since December 2017 rosbridge can be installed with apt as package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-rosbridge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="LabVIEW"></category></entry><entry><title>Robotics Toolbox and V-REP</title><link href="https://marek-gaw.github.io/blog/2016/02/robotics-toolbox-and-v-rep.html" rel="alternate"></link><published>2016-02-07T10:50:28-01:00</published><updated>2016-02-07T10:50:28-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-02-07:/blog/2016/02/robotics-toolbox-and-v-rep.html</id><summary type="html">&lt;p&gt;Recently I finally managed to fix communication between Matlab and V-REP.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Short introduction:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://petercorke.com/Toolboxes.html"&gt;Robotics Toolbox&lt;/a&gt; : Peter Corke created great tool: RTB, which is toolbox for Matlab.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://coppeliarobotics.com"&gt;V-REP&lt;/a&gt; : V-REP by Coppelia Robotics is simulation environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RTB has an option to communicate with V-REP as visualization tool.&lt;/p&gt;
+&lt;p&gt;I tried to run vrepdemo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I finally managed to fix communication between Matlab and V-REP.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Short introduction:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://petercorke.com/Toolboxes.html"&gt;Robotics Toolbox&lt;/a&gt; : Peter Corke created great tool: RTB, which is toolbox for Matlab.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://coppeliarobotics.com"&gt;V-REP&lt;/a&gt; : V-REP by Coppelia Robotics is simulation environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RTB has an option to communicate with V-REP as visualization tool.&lt;/p&gt;
+&lt;p&gt;I tried to run vrepdemo.m form RTB but I have encountered a problem with running it. My problem and solution was described on Google Groups: &lt;a class="reference external" href="https://groups.google.com/forum/#!topic/robotics-tool-box/-kvbV0Pyajc"&gt;Robotics and Machine Vision Toolboxes&lt;/a&gt;&lt;/p&gt;
+</content><category term="Robotics"></category><category term="V-REP"></category><category term="RTB"></category><category term="Matlab"></category></entry></feed>

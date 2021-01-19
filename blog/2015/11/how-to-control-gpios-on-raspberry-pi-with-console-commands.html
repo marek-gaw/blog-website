@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi). So, my first attempt was quite straight forward (you may find this solution …" />
+<meta name="keywords" content="Raspberry Pi, Linux, Kernel">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="How to control GPIOs on Raspberry Pi with console commands"/>
+<meta property="og:description" content="While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi). So, my first attempt was quite straight forward (you may find this solution …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2015/11/how-to-control-gpios-on-raspberry-pi-with-console-commands.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-11-15 18:36:19-01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Embedded"/>
+<meta property="article:tag" content="Raspberry Pi"/>
+<meta property="article:tag" content="Linux"/>
+<meta property="article:tag" content="Kernel"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; How to control GPIOs on Raspberry Pi with console commands</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="how-to-control-gpios-on-raspberry-pi-with-console-commands">How to control GPIOs on Raspberry Pi with console commands</h1>
+    <p>
+      Posted on nie 15 listopada 2015 in <a href="../../../category/embedded.html">Embedded</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi).
+So, my first attempt was quite straight forward (you may find this solution on the Internet):</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">code-block::</th><td class="field-body"><p class="first">bash</p>
+<p class="last">echo 18 &gt; /sys/class/gpio/export
+echo out &gt; /sys/class/gpio/gpio18/direction
+echo 1 &gt; /sys/class/gpio/gpio18/value
+echo 0 &gt; /sys/class/gpio/gpio18/value
+echo o18 &gt; /sys/class/gpio/unexport</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Looks nice, right? Obviously, there is a catch: permissions. Everything was ok unless I tried to set value to 1: at this point, RPi decided to not cooperate and reject my kind request with &quot;Permission denied&quot;.</p>
+<p>But then I have found post by user jojopi at raspberrypi.org (<a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;f=5">https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;f=5</a>) which led me to the right solution.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">code-block::</th><td class="field-body"><p class="first">bash</p>
+<p class="last">sudo sh -c 'echo 18 &gt; /sys/class/gpio/export'
+sudo sh -c 'echo out &gt; /sys/class/gpio/gpio18/direction'
+sudo sh -c 'echo 1 &gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo 0 &gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo o18 &gt; /sys/class/gpio/unexport'</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Tadaaaaa, it works.
+The catch is opeator &quot;&gt;&quot; which looks like to be immune to sudo.</p>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/raspberry-pi.html">Raspberry Pi</a>
+      <a href="../../../tag/linux.html">Linux</a>
+      <a href="../../../tag/kernel.html">Kernel</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

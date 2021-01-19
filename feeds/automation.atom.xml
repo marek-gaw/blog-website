@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff - Automation</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/automation.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2016-01-06T13:08:22+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Panel Builder: jmx files</title><link href="https://marek-gaw.github.io/blog/2016/01/panel-builder-jmx-files.html" rel="alternate"></link><published>2016-01-06T13:08:22+01:00</published><updated>2016-01-06T13:08:22+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-06:/blog/2016/01/panel-builder-jmx-files.html</id><summary type="html">&lt;p&gt;There is one good thing about files format in Panel Builder projects: they are text files.&lt;/p&gt;
+&lt;p&gt;Firsrt of all, I can use Git or any other Source Control Manager and store them easily. Obviously, I can do the same with binary files, but on text files I can do diff …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There is one good thing about files format in Panel Builder projects: they are text files.&lt;/p&gt;
+&lt;p&gt;Firsrt of all, I can use Git or any other Source Control Manager and store them easily. Obviously, I can do the same with binary files, but on text files I can do diff.&lt;/p&gt;
+&lt;p&gt;Pages in Panel Builder are saved as jmx files, which are plain XMLs. Why is this so important to me? I have created some screens (pages) with a lot of labels and fields. What is important, I had already imported tags, so the only task was to copy/paste widgets and connect tags: sounds like wasted hours for clicking.&lt;/p&gt;
+&lt;p&gt;But here comes Notepad++ for the rescue: what if I open jmx file in text editor and change connected tags with find/replace mechanism? If someone is keen on regexps - it is better.&lt;/p&gt;
+&lt;p&gt;So, let's see an example, how I did it.&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;XML&lt;/p&gt;
+&lt;p class="last"&gt;&amp;lt;object class=&amp;quot;NumericWgt&amp;quot; id=&amp;quot;field15&amp;quot;&amp;gt;
+&amp;lt;wgtStyle font-family=&amp;quot;Tahoma&amp;quot; font-sizepx=&amp;quot;21&amp;quot; cx=&amp;quot;23&amp;quot; cy=&amp;quot;9&amp;quot; step=&amp;quot;1&amp;quot; timeSpec=&amp;quot;local&amp;quot; alignment=&amp;quot;center&amp;quot; x=&amp;quot;280&amp;quot; y=&amp;quot;250&amp;quot;
+vert-align=&amp;quot;middle&amp;quot; frameFill=&amp;quot;rgb(0,0,255)&amp;quot; text=&amp;quot;99999&amp;quot; max=&amp;quot;32767&amp;quot; usingFormat=&amp;quot;#&amp;quot; value=&amp;quot;99999&amp;quot; keypad-type=&amp;quot;Numeric&amp;quot;
+font-color=&amp;quot;rgb(255,255,0)&amp;quot; min=&amp;quot;-32768&amp;quot; width=&amp;quot;62&amp;quot; readWrite=&amp;quot;true&amp;quot; height=&amp;quot;26&amp;quot; form=&amp;quot;Numeric&amp;quot; frame=&amp;quot;true&amp;quot; font-size=&amp;quot;16&amp;quot;/&amp;gt;
+&amp;lt;dataLinks&amp;gt;
+&amp;lt;dataLink readWrite=&amp;quot;R/W&amp;quot; attribute=&amp;quot;value&amp;quot; tag=&amp;quot;Recipe.CurrentSelectedSet.PARAM_1.Value&amp;quot; class=&amp;quot;RecipeMgrWgt&amp;quot; widgetType=&amp;quot;Project&amp;quot;
+sourceType=&amp;quot;Recipe&amp;quot; dataSource=&amp;quot;_RecipeMgr&amp;quot;/&amp;gt;
+&amp;lt;/dataLinks&amp;gt;
+&amp;lt;/object&amp;gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;On my screen, there were 30 widgets as such. The only difference in configuration, except position, was&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;XML&lt;/p&gt;
+&lt;p class="last"&gt;tag=&amp;quot;Recipe.CurrentSelectedSet.PARAM_1.Value&amp;quot;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My recipe has 30 elements named: PARAM_1 .:PARAM_30, so I have hanged it manually.&lt;/p&gt;
+&lt;p&gt;Obviously, this method is &amp;quot;unofficial&amp;quot;, so just after editing I had to check in Properties if all connections are correct, and if project works (at least in simulator). There is a chance to refer to non-existing tag, and there will be no warning!&lt;/p&gt;
+&lt;p&gt;One last remark is: Panel Builder does not see changes made externally in jmx files while is running, so my advice is to save project, close Panel Builder, do changes and check them in Panel Builder. This will also saves us from errors by making changes in the same file in two different, unsynchronized tools.&lt;/p&gt;
+</content><category term="Automation"></category><category term="ABB"></category><category term="Panel Builder"></category><category term="HMI"></category><category term="jmx"></category></entry><entry><title>ABB Panel Builder: page title</title><link href="https://marek-gaw.github.io/blog/2015/11/abb-panel-builder-page-title.html" rel="alternate"></link><published>2015-11-24T08:41:24+01:00</published><updated>2015-11-24T08:41:24+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2015-11-24:/blog/2015/11/abb-panel-builder-page-title.html</id><summary type="html">&lt;p&gt;Few days ago I have been working on project of operator panel for industrial machine. I've done it with CP655 panel, made by ABB, and software was created with Panel Builder 600.&lt;/p&gt;
+&lt;p&gt;The software is based on some old Visual Studio (2005 or 2008) in the same way, as a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few days ago I have been working on project of operator panel for industrial machine. I've done it with CP655 panel, made by ABB, and software was created with Panel Builder 600.&lt;/p&gt;
+&lt;p&gt;The software is based on some old Visual Studio (2005 or 2008) in the same way, as a lot of software is build on top of Eclipse.&lt;/p&gt;
+&lt;p&gt;In this and few next posts I'll try to show some tips how to use it, where are catches and so on. But for now, let's start from something very easy: how to show name of current screen?&lt;/p&gt;
+&lt;p&gt;My first idea was to create field on the template and connect it with system tag, which contains name of the page. Unfortunately, there is no such thing (in fact I'm not sure if it exist i.e. in WinCC flexible/TIA Portal).&lt;/p&gt;
+&lt;p&gt;Anyway, I solved it with simple workaround. I created internal tag (before it, protocol needs to be added!), and field on the template (just for convinience, to be sure that filed will be allways there) connected to it. Next step was what I'm not very proud of: on every screen I added action OnDisplay, which is executed every time screen is shown. In this action name of screen is written to tag.
+I don't like this solution, because it requires manual actions, like adding action to the new screen, and typing name of screen. If I will have enough time, I'll try to do the same with JavaScript.&lt;/p&gt;
+</content><category term="Automation"></category><category term="ABB"></category><category term="Panel Builder"></category><category term="HMI"></category></entry></feed>

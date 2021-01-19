@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="“Docker - praktyczne podstawy” to kolejne z jednodniowych warsztatów organizowanych przez StacjaIT." />
+<meta name="keywords" content="StacjaIT, Docker">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="&#34;Docker - praktyczne podstawy&#34;"/>
+<meta property="og:description" content="“Docker - praktyczne podstawy” to kolejne z jednodniowych warsztatów organizowanych przez StacjaIT."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../drafts/stacja-it---docker-pl.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-12-02 08:48:00+01:00"/>
+<meta property="article:modified_time" content="2017-12-03 20:45:00+01:00"/>
+<meta property="article:author" content="../author/marek-gawryszewski.html">
+<meta property="article:section" content="General"/>
+<meta property="article:tag" content="StacjaIT"/>
+<meta property="article:tag" content="Docker"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; &#34;Docker - praktyczne podstawy&#34;</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="..">
+        <img src="../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="stacja-it---docker">"Docker - praktyczne podstawy"</h1>
+    <p>
+      Posted on sob 02 grudnia 2017 in <a href="../category/general.html">General</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p><a href="https://www.meetup.com/pl-PL/Stacja-IT-Lodz/events/244928951/?eventId=244928951&amp;rv=ea1&amp;_af=event&amp;_af_eid=244928951&amp;rv=ea1">Docker - praktyczne podstawy</a>, to kolejne z jednodniowych warsztatów organizowanych przez StacjaIT, w których uczestniczyłem w tym roku, po &ldquo;Akademii Trenera&rdquo; i &ldquo;Wprowadzeniu do Machnie Learning z wykorzystaniem języka Python&rdquo;. Tym razem wybrałem warsztat dość mocno związany z pracą - Docker jest narzędziem, z którego faktycznie dotychczas korzystałem, ale tylko tylko z gotowych kontenerów. </p>
+<h3 id="miejsce">Miejsce<a class="headerlink" href="#miejsce" title="Permanent link">&para;</a></h3>
+<p>Poprzednie warsztaty w Łodzi były organizowane w <a href="https://www.facebook.com/koscielna6/">Coworking</a>, tym razem spotkaliśmy się w <a href="http://www.faktoria.lodz.pl/">Faktorii</a>. Sala szkoleniowa sprawia dobre pierwsze wrażenie, ale szczegóły spowodowały, że w moim odczuciu ta zmiana nie była dobrym pomysłem: dostęp do internetu był bardzo słabej jakości (biorąc pod uwagę ile acccess pointów było widocznych, nie tylko ja przełączyłem się na własny dostęp), kawa była dostępna tylko do wyczerpania - organizator zapowiedział, że nie będzie uzupełniać serwisu, poza tym nie ma tam miejsca, żeby spokojnie zjeść w przerwie. Wisienką na torcie była lampa projektowa wypalona tak, że musieliśmy wyłączyć światło, żeby widzieć wyraźnie co jest wyświetlane na ekranie.</p>
+<h3 id="organizacja">Organizacja<a class="headerlink" href="#organizacja" title="Permanent link">&para;</a></h3>
+<p>Jak zwykle, organizacja warsztatu bez zastrzeżeń: kanał na Slacku był wcześniej przygotowany, informacje o przygotowaniu do warsztatu były przesłane wcześniej.</p>
+<h3 id="cwiczenia">Ćwiczenia<a class="headerlink" href="#cwiczenia" title="Permanent link">&para;</a></h3>
+<p>Warsztat polegał na rozwiązaniu 10 zadań o rosnącym stopniu trudności rozpoczynając od zarządzania kontenerami, poprzez przygotowanie własnego kontenera aż po przygotowanie środowiska, w którym dwa kontenery współpracują ze sobą.</p>
+<h3 id="podsumowanie">Podsumowanie<a class="headerlink" href="#podsumowanie" title="Permanent link">&para;</a></h3>
+<p>Pomijając drobną wpadkę z miejscówką, warsztat uważam za godny polecenia każdemu, kto chce poznać Dockera. </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../tag/stacjait.html">StacjaIT</a>
+      <a href="../tag/docker.html">Docker</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

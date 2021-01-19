@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="For now, rosbridge is not available as .deb package, so I need to compile it by myself. Rosbridge can be cloned from GitHub: git clone https://github.com/RobotWebTools/rosbridge_suite.git There is a dependency with package rosauth - this package also needs to be compiled manually. git clone https://github …" />
+<meta name="keywords" content="ROS, LabVIEW">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="ros_bridge and LabVIEW"/>
+<meta property="og:description" content="For now, rosbridge is not available as .deb package, so I need to compile it by myself. Rosbridge can be cloned from GitHub: git clone https://github.com/RobotWebTools/rosbridge_suite.git There is a dependency with package rosauth - this package also needs to be compiled manually. git clone https://github …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2016/08/ros_bridge-and-labview.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-08-04 18:00:00+02:00"/>
+<meta property="article:modified_time" content="2016-09-14 18:00:00+02:00"/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Robotics"/>
+<meta property="article:tag" content="ROS"/>
+<meta property="article:tag" content="LabVIEW"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; ros_bridge and LabVIEW</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ros_bridge-and-labview">ros_bridge and LabVIEW</h1>
+    <p>
+      Posted on czw 04 sierpnia 2016 in <a href="../../../category/robotics.html">Robotics</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>For now, rosbridge is not available as .deb package, so I need to compile it by myself.</p>
+<p>Rosbridge can be cloned from GitHub:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/RobotWebTools/rosbridge_suite.git
+</code></pre></div>
+
+
+<p>There is a dependency with package <em>rosauth</em> - this package also needs to be compiled manually.</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/GT-RAIL/rosauth.git
+</code></pre></div>
+
+
+<p>What I found interesting, there is a dependency with Python package <em>bson</em></p>
+<div class="highlight"><pre><span></span><code>pip2 install bson
+</code></pre></div>
+
+
+<p>I had to use pip2 explicitly as I have Python3 installed among Python2 on my laptop.</p>
+<p>Basically, usual catkin build is sufficient to build both packages and run rosbridge server.</p>
+<h3 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
+<p>Since December 2017 rosbridge can be installed with apt as package:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install ros-kinetic-rosbridge
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/ros.html">ROS</a>
+      <a href="../../../tag/labview.html">LabVIEW</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

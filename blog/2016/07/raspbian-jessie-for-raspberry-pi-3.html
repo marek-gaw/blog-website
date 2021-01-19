@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="sudo apt-get update sudo apt-get upgrade sudo rpi-update sudo reboot sudo apt-get install build-essential git cmake pkg-config sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev sudo apt-get install libxvidcore-dev libx264-dev sudo apt-get install libgtk2.0-dev sudo apt-get install libatlas-base-dev gfortran sudo apt-get install mplayer2 …" />
+<meta name="keywords" content="Raspberry, Linux">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Raspbian Jessie for Raspberry Pi 3"/>
+<meta property="og:description" content="sudo apt-get update sudo apt-get upgrade sudo rpi-update sudo reboot sudo apt-get install build-essential git cmake pkg-config sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev sudo apt-get install libxvidcore-dev libx264-dev sudo apt-get install libgtk2.0-dev sudo apt-get install libatlas-base-dev gfortran sudo apt-get install mplayer2 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2016/07/raspbian-jessie-for-raspberry-pi-3.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-07-20 18:00:00+02:00"/>
+<meta property="article:modified_time" content="2016-09-14 18:00:00+02:00"/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Embedded"/>
+<meta property="article:tag" content="Raspberry"/>
+<meta property="article:tag" content="Linux"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Raspbian Jessie for Raspberry Pi 3</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="raspbian-jessie-for-raspberry-pi-3">Raspbian Jessie for Raspberry Pi 3</h1>
+    <p>
+      Posted on śro 20 lipca 2016 in <a href="../../../category/embedded.html">Embedded</a>
+
+        &#8226; 3 min read
+    </p>
+  </header>
+
+
+  <div>
+    <div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo reboot
+sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+sudo apt-get install mplayer2
+sudo apt-get install gstreamer1.0
+apt-get install libgstreamer1.0-0-dbg gstreamer1.0-tools libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad-dbg gstreamer1.0-omx gstreamer1.0-alsa
+sudo apt-get purge wolfram-engine
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip opencv.zip
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+unzip opencv_contrib.zip
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/opencv-3.1.0/
+mkdir build
+<span class="nb">cd</span> build
+cmake -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RELEASE <span class="se">\</span>
+    -D <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local <span class="se">\</span>
+    -D <span class="nv">INSTALL_C_EXAMPLES</span><span class="o">=</span>OFF <span class="se">\</span>
+    -D <span class="nv">INSTALL_PYTHON_EXAMPLES</span><span class="o">=</span>OFF <span class="se">\</span>
+    -D <span class="nv">OPENCV_EXTRA_MODULES_PATH</span><span class="o">=</span>~/opencv_contrib-3.1.0/modules <span class="se">\</span>
+    -D <span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>ON ..
+
+make -j4
+sudo make install
+sudo ldconfig
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ../..
+mkdir OCV
+<span class="nb">cd</span> OCV
+nano ocv_test.cpp
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;opencv2/opencv.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;OpenCV version : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">CV_VERSION</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Major version : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">CV_MAJOR_VERSION</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Minor version : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">CV_MINOR_VERSION</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Subminor version : &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">CV_SUBMINOR_VERSION</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="n">CV_MAJOR_VERSION</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="c1">// Old OpenCV 2 code goes here.</span>
+  <span class="p">}</span> <span class="k">else</span>
+  <span class="p">{</span>
+      <span class="c1">// New OpenCV 3 code goes here.</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code>g++ <span class="sb">`</span>pkg-config --cflags opencv<span class="sb">`</span> ocv_test.cpp <span class="sb">`</span>pkg-config --libs opencv<span class="sb">`</span> -o ocv_test
+ocv_test
+
+pi@raspberrypi:~/OCV $ ./ocv_test
+OpenCV version : <span class="m">3</span>.1.0
+Major version : <span class="m">3</span>
+Minor version : <span class="m">1</span>
+Subminor version : <span class="m">0</span>
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code>pi@raspberrypi:~/OCV $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  <span class="m">6</span>.6G  <span class="m">6</span>.0G  <span class="m">53</span>% /
+devtmpfs        459M     <span class="m">0</span>  459M   <span class="m">0</span>% /dev
+tmpfs           463M     <span class="m">0</span>  463M   <span class="m">0</span>% /dev/shm
+tmpfs           463M  <span class="m">6</span>.3M  457M   <span class="m">2</span>% /run
+tmpfs           <span class="m">5</span>.0M  <span class="m">4</span>.0K  <span class="m">5</span>.0M   <span class="m">1</span>% /run/lock
+tmpfs           463M     <span class="m">0</span>  463M   <span class="m">0</span>% /sys/fs/cgroup
+/dev/mmcblk0p6   63M   21M   43M  <span class="m">33</span>% /boot
+tmpfs            93M     <span class="m">0</span>   93M   <span class="m">0</span>% /run/user/1000
+</code></pre></div>
+
+
+<h1 id="ros-indigo">ROS Indigo<a class="headerlink" href="#ros-indigo" title="Permanent link">&para;</a></h1>
+<p>http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Indigo%20on%20Raspberry%20Pi</p>
+<div class="highlight"><pre><span></span><code>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu jessie main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - <span class="p">|</span> sudo apt-key add -
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
+sudo pip install rosdep rosinstall_generator wstool rosinstall
+sudo rosdep init
+rosdep update
+
+mkdir ~/ros_catkin_ws
+<span class="nb">cd</span> ~/ros_catkin_ws
+rosinstall_generator ros_comm --rosdistro indigo --deps --wet-only --exclude roslisp --tar &gt; indigo-ros_comm-wet.rosinstall
+wstool init src indigo-ros_comm-wet.rosinstall
+
+mkdir ~/ros_catkin_ws/external_src
+sudo apt-get install checkinstall cmake
+sudo sh -c <span class="s1">&#39;echo &quot;deb-src http://mirrordirector.raspbian.org/raspbian/ testing main contrib non-free rpi&quot; &gt;&gt; /etc/apt/sources.list&#39;</span>
+sudo apt-get update
+
+<span class="nb">cd</span> ~/ros_catkin_ws/external_src
+sudo apt-get build-dep console-bridge
+apt-get <span class="nb">source</span> -b console-bridge
+sudo dpkg -i libconsole-bridge0.2*.deb libconsole-bridge-dev_*.deb
+
+apt-get <span class="nb">source</span> -b lz4
+sudo dpkg -i liblz4-*.deb
+
+<span class="nb">cd</span> ~/ros_catkin_ws
+rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os<span class="o">=</span>debian:jessie
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE<span class="o">=</span>Release --install-space /opt/ros/indigo
+</code></pre></div>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/ros/indigo/setup.bash
+</code></pre></div>
+
+
+<p>http://answers.ros.org/question/219575/raspberry-pi2-roscpp-failed-during-indigo-installation/
+CONF_SWAPSIZE=1024</p>
+<p>liburdfdom-headers-dev:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="o">~/</span><span class="n">ros_catkin_ws</span><span class="o">/</span><span class="n">external_src</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">urdfdom_headers</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">urdfdom_headers</span>
+<span class="n">cmake</span> <span class="p">.</span>
+<span class="n">sudo</span> <span class="n">checkinstall</span> <span class="n">make</span> <span class="n">install</span>
+
+   <span class="k">When</span> <span class="k">check</span><span class="o">-</span><span class="n">install</span> <span class="n">asks</span> <span class="k">for</span> <span class="k">any</span> <span class="n">changes</span><span class="p">,</span> <span class="n">the</span> <span class="n">name</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">needs</span> <span class="k">to</span> <span class="n">change</span> <span class="k">from</span> <span class="ss">&quot;urdfdom-headers&quot;</span> <span class="k">to</span> <span class="ss">&quot;liburdfdom-headers-dev&quot;</span> <span class="n">otherwise</span> <span class="n">the</span> <span class="n">rosdep</span> <span class="n">install</span> <span class="n">wont</span> <span class="n">find</span> <span class="n">it</span><span class="p">.</span>
+</code></pre></div>
+
+
+<p>liburdfdom-dev:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="o">~/</span><span class="n">ros_catkin_ws</span><span class="o">/</span><span class="n">external_src</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="n">libboost</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">dev</span> <span class="n">libtinyxml</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">urdfdom</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">urdfdom</span>
+<span class="n">cmake</span> <span class="p">.</span>
+<span class="n">sudo</span> <span class="n">checkinstall</span> <span class="n">make</span> <span class="n">install</span>
+
+
+<span class="n">Adding</span> <span class="n">Released</span> <span class="n">Packages</span>
+</code></pre></div>
+
+
+<p>You may add additional packages to the installed ros workspace that have been released into the ros ecosystem. First, a new rosinstall file must be created including the new packages (Note, this can also be done at the initial install). For example, if we have installed ros_comm, but want to add ros_control and joystick_drivers, the command would be:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~/ros_catkin_ws
+rosinstall_generator ros_comm ros_control joystick_drivers --rosdistro indigo --deps --wet-only --exclude roslisp --tar &gt; indigo-custom_ros.rosinstall
+</code></pre></div>
+
+
+<p>You may keep listing as many ROS packages as you&rsquo;d like separated by spaces.</p>
+<p>Next, update the workspace with wstool:</p>
+<div class="highlight"><pre><span></span><code>wstool merge -t src indigo-custom_ros.rosinstall
+wstool update -t src
+</code></pre></div>
+
+
+<p>After updating the workspace, you may want to run rosdep to install any new dependencies that are required:</p>
+<p>Raspbian Wheezy:</p>
+<div class="highlight"><pre><span></span><code>rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os<span class="o">=</span>debian:wheezy
+</code></pre></div>
+
+
+<p>Raspbian Jessie:</p>
+<div class="highlight"><pre><span></span><code>rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os<span class="o">=</span>debian:jessie
+</code></pre></div>
+
+
+<p>Finally, now that the workspace is up to date and dependencies are satisfied, rebuild the workspace:</p>
+<div class="highlight"><pre><span></span><code>sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE<span class="o">=</span>Release --install-space /opt/ros/indigo
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/raspberry.html">Raspberry</a>
+      <a href="../../../tag/linux.html">Linux</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

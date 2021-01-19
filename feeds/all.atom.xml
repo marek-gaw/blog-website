@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/all.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2020-12-31T12:15:00+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Links dump 1: PSM I exam preparations</title><link href="https://marek-gaw.github.io/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html" rel="alternate"></link><published>2020-12-31T12:15:00+01:00</published><updated>2020-12-31T12:15:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-12-31:/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html</id><summary type="html">&lt;p&gt;Links dump 1: materials and tips for PSM 1 exam.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;rsquo;m in the middle of PSM 1 exam preparations. Here is a list of links I found valuable while preparing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.scrum.org/open-assessments/scrum-open"&gt;scrum.org - Open Assesment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.scrumguides.org/scrum-guide-2017.html"&gt;The 2017 Scrum GuideTM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.scrumguides.org/scrum-guide.html"&gt;The 2020 Scrum GuideTM&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mlapshin.com/index.php/scrum-quizzes/sm-learning-mode/"&gt;PSM I™ Preparation Quiz – Learning Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://scrumcrazy.wordpress.com/2018/09/06/scrum-org-professional-scrum-product-owner-pspo-i-assessment-study-tips/"&gt;The Scrum Crazy Blog: Scrum.org Professional Scrum Product Owner (PSPO I) Assessment Study Tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.udemy.com/course/scrum-master-certification-preparation-mock-exam-questions-psm-i/"&gt;Scrum Master Certification Preparation &amp;amp; 240+ Prep Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mlapshin.com/index.php/blog/scrum-questions/"&gt;Mikhail Lapshin - Scrum Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/scrum/comments/b5jxyo/recent_psm_i_examinees_is_there_anything_you_wish/"&gt;Reddit: Recent PSM I examinees, is there anything you wish you had done to prepare?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/scrum/comments/iqpbqc/how_to_pass_psm_i_exam_easy_way/"&gt;Reddit: How to pass PSM I exam (EASY WAY).&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/agile/comments/avb3is/selfstudying_and_passing_pspo_1_at_scrumorg_tips/"&gt;Reddit: Self-studying and passing PSPO 1 (at scrum.org) - tips and resources for you&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/agile/comments/b47m28/does_the_open_assessment_from_scrumorg_accurately/"&gt;Reddit: Does the Open Assessment from Scrum.org accurately reflect the content on the PSM I exam?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://drive.google.com/drive/folders/1lK119ovet1LmsE4s1O0OSdhrwRNtvCz9"&gt;How to prepare and pass scrum certification exam in one week&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.thescrumexperts.com/psm-1-quiz-5/"&gt;Scrum Experts: assesment test 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.thescrumexperts.com/psm-1-additional-practice-questions-1/"&gt;Scrum Experts: assesment test 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.thescrumexperts.com/psm-1-additional-practice-questions-2/"&gt;Scrum Experts: assesment test 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/lorabv/awesome-agile"&gt;GitHub: Awesome Agile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://agileforce.pl/blog/jak-wyglada-egzamin-professional-scrum-master-na-scrum-org/"&gt;(PL) Jak wygląda egzamin Professional Scrum Master na Scrum.org?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kariera.future-processing.pl/blog/professional-scrum-master-how-to-prepare/"&gt;Professional Scrum Master – how to prepare?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.volkerdon.com/pages/psm-1-exam-tips"&gt;PSM 1 exam tips&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Links-dump"></category><category term="scrum"></category><category term="PSM1"></category><category term="links-dump"></category></entry><entry><title>Buildroot for Wandboard</title><link href="https://marek-gaw.github.io/blog/2020/12/buildroot-for-wandboard.html" rel="alternate"></link><published>2020-12-10T18:30:00+01:00</published><updated>2020-12-10T18:30:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-12-10:/blog/2020/12/buildroot-for-wandboard.html</id><summary type="html">&lt;p&gt;Short instruction, how to create minimal Linux system for Wandboard.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://buildroot.org/"&gt;Buildroot&lt;/a&gt; is an open source tool, used to generate complete Linux system. It is mailny used to handle embedded systems.&lt;/p&gt;
+&lt;p&gt;As for today, the most recent, stable version is 2020.02.8.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s download it and prepare configuration:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# download archive&lt;/span&gt;
+❯ wget https://buildroot.org/downloads/buildroot-2020.02.8.tar.gz
+
+&lt;span class="c1"&gt;# untar downloaded archive&lt;/span&gt;
+❯ tar zxvf ./buildroot-2020.02.8.tar.gz
+❯ &lt;span class="nb"&gt;cd&lt;/span&gt; buildroot-2020.02.8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I want to create setup for &lt;a href="https://www.wandboard.org/"&gt;Wandboard&lt;/a&gt;. I can create whole setup from scratch, or use predefined, minimal setup. Since I want to proceed straight to the point, I decided to use predefined setup:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make wandboard_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Side note: Buildroot has default config for many boards (including Raspberry Pi and any popular board, available on the market). Parameters for command above can be found with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ grep -irns &lt;span class="s2"&gt;&amp;quot;wand&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep defconfig
+wandboard/readme.txt:7:    $ make wandboard_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The same, for &lt;a href="https://beagleboard.org/black"&gt;BeagleBone Black&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ grep -irns &lt;span class="s2"&gt;&amp;quot;beaglebone&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; grep defconfig
+beagleboneai/readme.txt:14:    $ make beagleboneai_defconfig
+beaglebone/readme.txt:13:For Qt5 support support use the beaglebone_qt5_defconfig.
+beaglebone/readme.txt:19:$ make beaglebone_defconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This means, that Buildroot provides support for BeagleBone Black and BeagleBone AI.&lt;/p&gt;
+&lt;p&gt;If there is a need for inspection of default values, use menuconfig for that:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make menuconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or, if you prefer X-Window configurator:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make xconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, build system with simple:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After couple of minutes (more likey 30 rather than 5&amp;hellip;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ ll utput/images
+
+razem 61M
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  35K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  35K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard-revb1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6dl-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  39K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6qp-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  37K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard-revb1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  38K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 imx6q-wandboard-revd1.dtb
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  60M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.ext2
+lrwxrwxrwx &lt;span class="m"&gt;1&lt;/span&gt; marek marek   &lt;span class="m"&gt;11&lt;/span&gt; gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.ext4 -&amp;gt; rootfs.ext2
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  15M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 rootfs.tar
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  61M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 sdcard.img
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek  47K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 SPL
+-rwxr-xr-x &lt;span class="m"&gt;1&lt;/span&gt; marek marek 350K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 u-boot.bin
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek 350K gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:18 u-boot.img
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; marek marek &lt;span class="m"&gt;8&lt;/span&gt;.2M gru &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;:39 zImage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Write image to SD card (please mind your destination device, you can destroy your data here!)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;❯ dd &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;output/images/sdcard.img &lt;span class="nv"&gt;of&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/dev/mmcblk &lt;span class="nv"&gt;bs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1M
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;System is ready to boot!&lt;/p&gt;</content><category term="Embedded"></category><category term="Wandboard"></category><category term="Buildroot"></category></entry><entry><title>Standard setup for presentations</title><link href="https://marek-gaw.github.io/blog/2020/05/standard-setup-for-presentations.html" rel="alternate"></link><published>2020-05-13T09:04:00+02:00</published><updated>2020-09-01T20:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-05-13:/blog/2020/05/standard-setup-for-presentations.html</id><summary type="html">&lt;p&gt;Description of bootstrap setup for my prestentations&lt;/p&gt;</summary><content type="html">&lt;p&gt;Original idea was created by Michał Gałka, and is available on &lt;a href="https://github.com/marek-gaw/letsbioit"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;My main goal is to create my presentations in Markdown and generate output in a form, which is the most suitable: it might be html or pdf.
+With this approach, I can focus on the content, without thinking about how exactly it will be presented on a page. This is also a way to overcome a desire to squash too much on a single slide.&lt;/p&gt;
+&lt;p&gt;Content is created in single Markdown document and output is generated with &lt;a href="https://pandoc.org/"&gt;Pandoc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In case of more interactive presentations, I use great HTML/JS framework: &lt;a href="https://github.com/hakimel/reveal.js/"&gt;reveal.js&lt;/a&gt;. In my setup Pandoc uses markdown document as an input and generates complete website.&lt;/p&gt;
+&lt;p&gt;As an example, you can take a look at presentation given at &lt;a href="https://www.meetup.com/pl-PL/LodzCEHUG/"&gt;CEHUG&lt;/a&gt; last year: &lt;a href="https://github.com/marek-gaw/presentations/tree/master/12_ROS_CEHUG"&gt;ROS: o robotach słów kilka&lt;/a&gt;&lt;/p&gt;</content><category term="General"></category><category term="markdown"></category><category term="revealjs"></category><category term="pandoc"></category></entry><entry><title>Recruitment with Codility</title><link href="https://marek-gaw.github.io/blog/2018/03/recruitment-with-codility-EN.html" rel="alternate"></link><published>2018-03-18T17:10:00+01:00</published><updated>2018-03-18T17:10:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2018-03-18:/blog/2018/03/recruitment-with-codility-EN.html</id><summary type="html">&lt;p&gt;I have taken Codility test - here are my thoughts about it.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I decided to take part in recruitment process for one of big companies in my area. One of process stages is to take part in &lt;a href="https://app.codility.com/programmers/"&gt;Codility&lt;/a&gt; contest.&lt;/p&gt;
+&lt;p&gt;While I already made my assignment, I feel like I have an idea how to take part in such events&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Know your enemy&lt;/p&gt;
+&lt;p&gt;There is no worse mistake in case of Codility test, than to not get familiar with the type of tasks to solve. Moreover, there are &lt;a href="https://app.codility.com/programmers/lessons/1-iterations/"&gt;lessons&lt;/a&gt; and &lt;a href="https://app.codility.com/programmers/challenges/"&gt;challenges&lt;/a&gt; which will show you, how the process works and, which is the vital part, what kind of tasks are there.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Prepare IDE&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://app.codility.com/candidate-faq/"&gt;Official FAQ&lt;/a&gt; states, that using of external IDE is allowed. From my point of view it is not even encouraged. It is obligatory. It is not only because of code completion, in my case, it was easier to debug my code with GDB than use std::cout (which is available at Codility).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get familiar with data structures and algorithms&lt;/p&gt;
+&lt;p&gt;This is the main area of topics (at least ones I saw and I am aware of). During the test, there is no time to ask Google, how linked list works, this is what we should know already.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get familiar with your language&lt;/p&gt;
+&lt;p&gt;This also seems obvious, but it is good to know gotchas, which our tools have: in case of C++, it is good to know and understand STL algorithms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Take demo test&lt;/p&gt;
+&lt;p&gt;This is almost the same situation as we will have during real test: the time is constrained and our solution is assessed in the same way against correctness and performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Practice, practice, practice&lt;/p&gt;
+&lt;p&gt;There is no better way to learn how to solve puzzles than solving puzzles. I encourage everyone to solve some of available challenges to get familiar with the process, and to have an idea of what actual, &amp;ldquo;real&amp;rdquo; test will look like.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I don&amp;rsquo;t feel like I was assessed extensively with Codility, or solving one or two riddles will show my ability to create good software. Anyway, this is a little bit better version of fizz-buzz test, originally proposed by Joel Spolsky on his &lt;a href="https://blog.codinghorror.com/why-cant-programmers-program/"&gt;blog note: Why can&amp;rsquo;t programmers program?&lt;/a&gt; (I recommend to read other articles too!). So, I feel &amp;ldquo;not-so-sure&amp;rdquo; about Codility, but this is better way than white board programming, and if used as one of many, rather than only, step in recruitment process, it is good enough. &lt;/p&gt;</content><category term="General"></category><category term="Codility"></category><category term="Recruitment"></category></entry><entry><title>Mobilization 2017 and TDD Workshop - summary</title><link href="https://marek-gaw.github.io/blog/2017/10/mobilization-2017-summary.html" rel="alternate"></link><published>2017-10-29T11:14:00+01:00</published><updated>2017-10-29T11:14:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-10-29:/blog/2017/10/mobilization-2017-summary.html</id><summary type="html">&lt;p&gt;&lt;a href="http://2017.mobilization.pl/"&gt;Mobilization&lt;/a&gt; is probably the biggest IT conference which happens in Łódź, each year since 2011. I attend this event each year since 2015 edition, so it was my third time, and I was pretty sure what I can expect.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://2017.mobilization.pl/"&gt;Mobilization&lt;/a&gt; is probably the biggest IT conference which happens in Łódź, each year since 2011. I attend this event each year since 2015 edition, so it was my third time, and I was pretty sure what I can expect.&lt;/p&gt;
+&lt;p&gt;Presentations I attended:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;How to combine Swift/Kotlin with C/C++ by Michał Kowalczyk&lt;/p&gt;
+&lt;p&gt;This one was interesting, because it involved C++. Michał showed, how to actually use C++ on mobile: his idea is to create reusable, platform-agnostic backend of application, and native frontend, for Android or iOS. This idea is worth considering, if your application has to be created and maintained for all (Android, iOS, Windows) platforms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Android Things 101 by Raul Portales&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using Android Things to detect &amp;amp; exterminate Reptilians by Gautier Mechling&lt;/p&gt;
+&lt;p&gt;Both of those two presentations were more or less about the same: introduction to Android Things. Those presentation were not too deep in details, but gave me pretty good insight in Android Things, enough to draw my attention.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This time, before the main event, I attended workshop, made by guys from &lt;a href="https://www.elpassion.com/"&gt;EL Passion&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;From my point of view, this workshop was mainly about TDD in practice. Eventually, it was far more demanding: the main programming language was &lt;a href="https://kotlinlang.org/"&gt;Kotlin&lt;/a&gt;, and we were using extensively &lt;a href="https://github.com/ReactiveX/RxJava"&gt;RxJava&lt;/a&gt;. Obviously, those are not my main technologies, as Android is not, but I was going there to familiarize myself with Test Driven Development. Also, this was an opportunity to get to know Kotlin, which looks like very interesting replacement for Java. I think I need to go deeper in this topic, as it seems, that for Android, this will be main and leading technology.&lt;/p&gt;
+&lt;p&gt;For those, who would like to know the agenda:&lt;a href="https://crossweb.pl/wydarzenia/kotlin-android-workshops-with-el-passion-listopad-2017/"&gt;Workshop  announcement&lt;/a&gt;.
+For those, who would like to attend this workshop, you can do this for free &lt;a href="https://www.elpassion.com/workshops/android/"&gt;Workshop&lt;/a&gt; - I strongly recommend it!&lt;/p&gt;
+&lt;p&gt;To sum up: the conference gave me an opportunity to learn something new, despite of the fact, that mobile is not my main topic of interest. Also, workshops, which were organized for the first time, is a great idea. &lt;/p&gt;</content><category term="General"></category><category term="Mobilization"></category><category term="TDD"></category><category term="Android Things"></category></entry><entry><title>High Impact Presentation by Dale Carnegie - my experience</title><link href="https://marek-gaw.github.io/blog/2017/10/high-impact-presentation-by-dale-carnegie---my-experience.html" rel="alternate"></link><published>2017-10-05T14:09:00+02:00</published><updated>2017-10-06T14:09:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-10-05:/blog/2017/10/high-impact-presentation-by-dale-carnegie---my-experience.html</id><summary type="html">&lt;p&gt;My impressions and thoughts after attending High Impact Presentations by Dale Carnegie&lt;/p&gt;</summary><content type="html">&lt;p&gt;September is a month of trainings for me - on first weekend I was attending &amp;ldquo;Akademia Trenera&amp;rdquo; ogranized by &lt;a href="www.sages.com.pl"&gt;Sages&lt;/a&gt; in cooperation with &lt;a href="www.metrosoft.com"&gt;Metrosoft&lt;/a&gt;, and later this month I went to Warsaw for &amp;ldquo;High Impact Presentations&amp;rdquo; by &lt;a href="http://www.dalecarnegie.com.pl/"&gt;Dale Carnegie Traing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Whole training took 2 days: 8 hours each day, plus homework, and it was really busy days. &lt;/p&gt;
+&lt;p&gt;From my point of view, the goal of whole training was to made as much presentations as possible. Indeed, during those two days, each of 12 participants had to stand before audience 7 times. Each presentation was recorded, and we were asked to point out our strengths and things which may be improved.&lt;/p&gt;
+&lt;p&gt;To make this training as productive as possible, two of  our presentations were slightly different: first was reading a speech - this was interesting because we were encouraged by trainers to play with our voice and body language. Second, was especailly interesting for me: Q&amp;amp;A session with though questions (we were asked to prepare some of them&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;Despite of the fact, that content of our presentations was not important at all (actually, we could say anything) but the form was still mastered: we had to stick some provided templates, which were prepared for specific task. For example: if presentation was given to present some complicated idea, presentation had to include some general analogy which allows audience to find something known in this new idea. Actually, each of our presentations had this strict structure, which was very useful.&lt;/p&gt;
+&lt;p&gt;Genreal impression? I would recommend this training to anyone, who already made some presentations. This is important, because this training is about to move forward not to make baby steps.&lt;/p&gt;
+&lt;p&gt;Personally, I was impressed, how much I have changed since my first presentation there - I was convinced that my presentations are good already, but now I see that it was not always true, but hopefully - I found some tips to improve.&lt;/p&gt;
+&lt;p&gt;More information about training: &lt;a href="http://www.dalecarnegie.com.pl/events/how_to_out_fox_your_competition_-_workshop/"&gt;High Impact Presentations&lt;/a&gt;&lt;/p&gt;</content><category term="General"></category><category term="Training"></category><category term="Dale Carnegie"></category></entry><entry><title>Qt online installer for Windows</title><link href="https://marek-gaw.github.io/blog/2017/09/qt-online-installer-for-windows-EN.html" rel="alternate"></link><published>2017-09-11T19:41:00+02:00</published><updated>2017-09-12T20:31:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-09-11:/blog/2017/09/qt-online-installer-for-windows-EN.html</id><summary type="html"></summary><content type="html">&lt;h1 id="qt-online-installer-for-windows"&gt;Qt online installer for Windows&lt;a class="headerlink" href="#qt-online-installer-for-windows" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Recently I wanted to upgrade my Qt installation to more recent version. Qt Maitanance Tool&lt;/p&gt;
+&lt;p&gt;Related bug: &lt;a href="https://bugreports.qt.io/browse/QTBUG-53549"&gt;Qt bugtracker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I tried things described on &lt;a href="https://stackoverflow.com/questions/22775906/how-to-update-component-in-qt-5-2-1#31685711"&gt;Stack Overflow&lt;/a&gt;, but it didn&amp;rsquo;t work for me.&lt;/p&gt;
+&lt;p&gt;Final solution is here: &lt;a href="https://forum.qt.io/topic/43349/slow-downloads-with-the-online-installer-try-this-tool"&gt;solution&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github: &lt;a href="https://github.com/JKSH/QtSdkRepoChooser/releases"&gt;Repository switcher&lt;/a&gt;&lt;/p&gt;</content><category term="General"></category><category term="Qt"></category></entry><entry><title>Recently seen: CMake effectively</title><link href="https://marek-gaw.github.io/blog/2017/07/c++,%20programming,%20cmake.html" rel="alternate"></link><published>2017-07-24T21:11:00+02:00</published><updated>2017-07-24T21:11:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-07-24:/blog/2017/07/c++, programming, cmake.html</id><summary type="html"></summary><content type="html">&lt;div class="youtube"&gt;
+&lt;iframe width="700" height="400" src="https://www.youtube.com/embed/bsXLMQ6WgIk" seamless frameBorder="0"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content><category term="Programming"></category><category term="C++"></category></entry><entry><title>WF21090 on RPi3</title><link href="https://marek-gaw.github.io/blog/2017/03/wf21090-on-rpi3.html" rel="alternate"></link><published>2017-03-09T18:29:00+01:00</published><updated>2017-03-15T18:16:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-03-09:/blog/2017/03/wf21090-on-rpi3.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Virtually, the core of solution is described &lt;a href="https://ubuntuforums.org/showthread.php?t=2258715"&gt;here&lt;/a&gt; and &lt;a href="https://github.com/gnab/rtl8812au"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All steps below should be done on RPi (also compilation)!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install build-essential git
+git clone https://github.com/gnab/rtl8812au.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; rtl8812au
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, change line in Makefile, to compile module for RPi:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nano Makefile
+
+...
+&lt;span class="nv"&gt;CONFIG_PLATFORM_I386_PC&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; n
+...
+&lt;span class="nv"&gt;CONFIG_PLATFORM_ARM_RPI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then just compile and istall:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make
+sudo make install
+sudo modprobe 8812au
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As I bowsed thrugh the Internet, this should be sufficient in most cases.&lt;/p&gt;
+&lt;p&gt;But, obviously - not mine:-)&lt;/p&gt;
+&lt;p&gt;There are two possible problems, that have to be solved.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kernel headers. Raspbian or Ubuntu Mate (which I use) do not have kernel headers by default, so I had to install them manually. The key here is kernel version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uname -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Is your firend.&lt;/p&gt;
+&lt;p&gt;I tried to install packages like kernel-headers-generic but this didn&amp;rsquo;t provide right sources. I had to have specific version 4.19.v7+
+I found &lt;a href="http://raspberrypi.stackexchange.com/questions/28307/dwa-171-using-8812au-ko-does-not-seem-to-work-on-linux-kernel-version-3-18-8"&gt;this SO topic&lt;/a&gt; very useful: the key to success was to use rpi-source to get right kernel headers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GCC version. I had to install gcc-4.7, and compile my module with it.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Embedded"></category><category term="Raspberry Pi"></category><category term="WF21090"></category></entry><entry><title>GIT 101 Workshop</title><link href="https://marek-gaw.github.io/blog/2017/01/git-101-workshop.html" rel="alternate"></link><published>2017-01-15T18:57:00+01:00</published><updated>2017-01-15T18:57:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-01-15:/blog/2017/01/git-101-workshop.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Using version control system is suprisingly not so common among students. I remember how painful was to keep history of changes without any CVS, so I decided to conduct another workshop: this time focused on practical usage of git and GitHub.&lt;/p&gt;
+&lt;p&gt;Workshop materials are available &lt;a href="https://github.com/marek-gaw/workshops/tree/master/GIT-101"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="General"></category><category term="git"></category></entry><entry><title>CEH UG - new meetup in Lodz!</title><link href="https://marek-gaw.github.io/blog/2017/01/ceh-ug---new-meetup-in-lodz!.html" rel="alternate"></link><published>2017-01-08T14:40:00+01:00</published><updated>2017-01-11T21:54:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2017-01-08:/blog/2017/01/ceh-ug---new-meetup-in-lodz!.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I was thinking about starting new meetup in Lodz for some time. In fact, there are so few gropus, which are about embedded systems or electronics in comparision to Java/JS/Web. In fact, there is no meetup (which I am aware of), which touch this topic in Lodz area - it is time to change it!:-)&lt;/p&gt;
+&lt;p&gt;C/Embedded/Hardware User Group (CEHUG) is about to create space for hobbysts and professionals, who work with any kind of embedded systems. I want this group to be very broad: I want to invite software developers to tell about pitfalls of C or engineers to show, how to design sensor system properly. I belive, there are many people in Lodz, who work with embedded systems on daily basis - I want to create a place where they can share their experience and knowledge.&lt;/p&gt;
+&lt;p&gt;Interested? Please, feel free to join us!&lt;/p&gt;
+&lt;p&gt;Link:
+&lt;a href="https://www.meetup.com/LodzCEHUG/"&gt;CEH UG&lt;/a&gt; at Meetup&lt;/p&gt;</content><category term="General"></category><category term="CEHUG"></category></entry><entry><title>MBZIRC - we are in finals!</title><link href="https://marek-gaw.github.io/blog/2016/12/mbzirc---we-are-in-finals!.html" rel="alternate"></link><published>2016-12-17T14:00:00+01:00</published><updated>2016-12-30T13:00:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-12-17:/blog/2016/12/mbzirc---we-are-in-finals!.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Today we were informed, that our team was qualified to finals of &lt;a href="https://www.mbzirc.com"&gt;MBZIRC&lt;/a&gt; competition!&lt;/p&gt;
+&lt;p&gt;I am part of the team, which works on autonomous drone, ground vehicle is prize-winning Raptor (see their &lt;a href="http://raptors.p.lodz.pl"&gt;webpage&lt;/a&gt;). &lt;/p&gt;
+&lt;p&gt;It seems, that March 2017 will be very interesting for us! There is still a lot of work to do. but I hope, we will manage to do evenrything on time. Fingers crossed;-)&lt;/p&gt;</content><category term="General"></category></entry><entry><title>How to clone Raspberry Pi SD card</title><link href="https://marek-gaw.github.io/blog/2016/11/how-to-clone-raspberry-pi-sd-card.html" rel="alternate"></link><published>2016-11-12T10:00:00+01:00</published><updated>2016-11-12T10:00:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-11-12:/blog/2016/11/how-to-clone-raspberry-pi-sd-card.html</id><summary type="html">&lt;p&gt;The problem behind this post is: how can I share my Raspberry Pi system with others? Obvious answer is: let&amp;rsquo;s dd the SD card! Unfortunately, this MIGHT work if both cards are the same: same size and same manufacturer. &lt;/p&gt;
+&lt;p&gt;It would be too easy, if I had the same …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The problem behind this post is: how can I share my Raspberry Pi system with others? Obvious answer is: let&amp;rsquo;s dd the SD card! Unfortunately, this MIGHT work if both cards are the same: same size and same manufacturer. &lt;/p&gt;
+&lt;p&gt;It would be too easy, if I had the same SD card in my Raspberry than others in my team..&lt;/p&gt;
+&lt;p&gt;Finally, I figured out, that making bit-by-bit copy of SD card is not as good solution as I supposed it to be, and I need to copy partitions and file systems instead.&lt;/p&gt;
+&lt;p&gt;First of all, I need to work with fdisk:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/mmcblk0
+I
+
+fdisk /dev/mmcblk0
+O
+
+Disk /dev/mmcblk0: &lt;span class="m"&gt;14&lt;/span&gt;,5 GiB, &lt;span class="m"&gt;15523119104&lt;/span&gt; bytes, &lt;span class="m"&gt;30318592&lt;/span&gt; sectors
+Units: sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+I/O size &lt;span class="o"&gt;(&lt;/span&gt;minimum/optimal&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Disklabel type: dos
+Disk identifier: 0x580a66ff
+
+Urządzenie     Rozruch  Start   Koniec  Sektory  Size Id Typ
+/dev/mmcblk0p1 *         &lt;span class="m"&gt;2048&lt;/span&gt;   &lt;span class="m"&gt;133119&lt;/span&gt;   &lt;span class="m"&gt;131072&lt;/span&gt;   64M  c W95 FAT32 &lt;span class="o"&gt;(&lt;/span&gt;LBA&lt;span class="o"&gt;)&lt;/span&gt;
+/dev/mmcblk0p2         &lt;span class="m"&gt;133120&lt;/span&gt; &lt;span class="m"&gt;30318591&lt;/span&gt; &lt;span class="m"&gt;30185472&lt;/span&gt; &lt;span class="m"&gt;14&lt;/span&gt;,4G &lt;span class="m"&gt;83&lt;/span&gt; Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Some magic is required: remove ext4 partition, and create new one&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fdisk /dev/mmcblk0
+d
+&lt;span class="m"&gt;2&lt;/span&gt;
+n - new partition
+p - primary
+default options
+w
+
+sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Remove card, insert card.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;losetup --partscan --find --show Rpi3_ROS_v1.1.img  
+
+sudo mount /dev/loop0p1 /mnt/pip1  
+sudo mount /dev/loop0p2 /mnt/pip2  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Partitions on new SD card should look like this:
+partition 1: FAT32, 2048-133119
+partition 2: ext4, the rest of space&lt;/p&gt;
+&lt;p&gt;After that, both partition should be formated and mounted (with i.e. gparted).&lt;/p&gt;
+&lt;p&gt;Here is the magic:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo rsync -rltzuv --progress /mnt/pip1 /media/marek/06ead7c6-62ae-46b0-882b-eddab4de7d74
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After some time, we get 1-1 copy of SD card.&lt;/p&gt;</content><category term="Robotics"></category><category term="Raspberry"></category></entry><entry><title>NI Days 2016</title><link href="https://marek-gaw.github.io/blog/2016/10/ni-days-2016.html" rel="alternate"></link><published>2016-10-11T07:12:00+02:00</published><updated>2016-10-11T07:12:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-10-11:/blog/2016/10/ni-days-2016.html</id><summary type="html"></summary><content type="html">&lt;p&gt;NI Days is annual conference which gathers all engineers and companies interested in National Instruments products, mainly LabVIEW but also TestStand and so on.&lt;/p&gt;
+&lt;p&gt;This year I was there with my presentation about connecting ROS and LabVIEW. I shown my results of small project which was created just because we need to connect sbRIO board to ROS. &lt;/p&gt;
+&lt;p&gt;It was supprising for me, how many networking opportunities I had during this conference. I met Anna Kuzminski, who is responsible for introducing Linux to NI&amp;rsquo;s embedded systems. As she told me, the feture is bright, as NI have chosen Linux as their main system for embedded controllers (maybe also PXI?). This is especially interesting for me, as I like to use myRIO with C or C++.&lt;/p&gt;
+&lt;p&gt;Also, this looks that compiling ROS for myRIO seems to be more sensible than before.&lt;/p&gt;</content><category term="General"></category><category term="LabVIEW"></category><category term="ROS"></category></entry><entry><title>ROS Kinetic and V-REP 3.3.2</title><link href="https://marek-gaw.github.io/blog/2016/09/ros-kinetic-and-v-rep-3.3.2.html" rel="alternate"></link><published>2016-09-19T18:35:00+02:00</published><updated>2016-09-19T18:35:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-09-19:/blog/2016/09/ros-kinetic-and-v-rep-3.3.2.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I wanted to connect my V-REP simulation to ROS. Obviously, since Kinetic anything is simple, so I had to go through some steps, to make it work.&lt;/p&gt;
+&lt;p&gt;There is always &lt;a href="http://wiki.ros.org/vrep_ros_bridge"&gt;vrep_ros_bridge&lt;/a&gt; page, but for now there is no information about migration to Kinetic.Anyway, &lt;a href="https://github.com/lagadic/vrep_ros_bridge"&gt;this tutorial on GitHub&lt;/a&gt; seems to be up-to-date, and most of steps are the same/similiar to what I described below.&lt;/p&gt;
+&lt;p&gt;I assume, that ROS workspace is already created in ~/ROS/ws_vrep.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We need to grab the code:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; src
+git clone https://github.com/lagadic/vrep_ros_bridge.git
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It is better to checkout on master rather than *-devel branch, as they seem to be dedicated to different ROS distribution.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install V-REP &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We need to have our V-REP unpacked somewhere and create env with path:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VREP_ROOT_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&amp;lt;path_to_vrep_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Install gazebo messages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-gazebo-msgs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Supress Telekyb by creating CATKIN_IGNORE file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;vrep_ros_bridge was designed to simulate quadrocopter with Telekyb controller. Since this is not relevant, it is better to tell CMake to ignore it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; src/vrep_ros_bridge/quadrotor_tk_hander
+touch CATKIN_IGNORE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Stop! Catkin time!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;One important info: if workspace was already initialized by catkin_make, it has to be deleted (devel directory) and initialized again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python-catkin-tools
+&lt;span class="nb"&gt;source&lt;/span&gt; /opt/ros/kinetic/setup.bash
+&lt;span class="o"&gt;[&lt;/span&gt;in ROS/ws_vrep&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;source&lt;/span&gt; devel/setup.bash
+catkin build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Almost there: building vrep_ros_bridge&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;catkin build --no-deps vrep_ros_bridge --cmake-args -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;RelWithDebInfo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Needed symboilc links&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Obviously, &amp;hellip; has to be replaced by proper path.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ln -s /home/.../ROS/ws_vrep/devel/lib/libv_repExtRosBridge.so /home/.../V-REP_PRO_EDU_V3_3_2_64_Linux
+ln -s compiledRosPlugins/libv_repExtRos.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Official VREP tutorial advises to copy files, but I prefer to symlink them.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First crash&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sorry, for me first run was crash.
+Plugin cant be loaded, so I checked out what was happening&amp;hellip; Error message told me that there is no boost_system library - which was obviously not true. To solve this, I just need to compile RosInterface and RosPlugin in Vrep by myself. Easy? Easy.&lt;/p&gt;
+&lt;p&gt;Code is in vrep/programming/ros_packages.&lt;/p&gt;
+&lt;p&gt;compilation process is described at &lt;a href="http://www.coppeliarobotics.com/helpFiles/en/rosTutorialIndigo.htm"&gt;Coopelia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I prefer to make symlinks instead of copying files, so at the end I just made symliks for libv_repExtRos.so and libv_repExtRosInterface.so&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It still does not work? Is vrep_bridge_plugin package installed in ros?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt; /ROS/ws_vrep/devel/setup.bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Thanks to this, ROS-specific envs are set, so V-REP can start and run ROS-enabled simulation.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a dirty trick, but untill I will find how to install package with catkin build&lt;/p&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="V-REP"></category></entry><entry><title>LabVIEW - ROS communication</title><link href="https://marek-gaw.github.io/blog/2016/09/labview---ros-communication.html" rel="alternate"></link><published>2016-09-17T12:56:00+02:00</published><updated>2016-12-29T10:00:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-09-17:/blog/2016/09/labview---ros-communication.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Finally, I have created working proof of concept of working bridge between ROS and LabVIEW.&lt;/p&gt;
+&lt;p&gt;It is not perfect - it parses only limited set of ROS messages and because of that, it cannot be called &amp;ldquo;universal solution&amp;rdquo;. For me it was good enough to make communication between myRIO with LabVIEW app and ROS on desktop.&lt;/p&gt;
+&lt;p&gt;Project can be found on my &lt;a href="https://github.com/marek-gaw/lv-ros-bridge"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><category term="Robotics"></category><category term="LabVIEW"></category><category term="ROS"></category></entry><entry><title>Python Meetup - summary</title><link href="https://marek-gaw.github.io/blog/2016/08/python-meetup-summary.html" rel="alternate"></link><published>2016-08-27T16:00:00+02:00</published><updated>2016-08-27T16:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-27:/blog/2016/08/python-meetup-summary.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My presentation was last Thursday, in CoworKING.&lt;/p&gt;
+&lt;p&gt;Presentation is available on github: &lt;a href="http://htmlpreview.github.io/?https://github.com/marek-gaw/meetup-python/blob/master/document/out/document.html#/"&gt;presentation&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I have shown 3 demos, below you can find source code.&lt;/p&gt;
+&lt;h3 id="demo-1"&gt;Demo 1&lt;a class="headerlink" href="#demo-1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This demo shows how to send and receive data via topics in ROS. Nodes were created in Python, with rospy library.&lt;/p&gt;
+&lt;p&gt;Files:&lt;/p&gt;
+&lt;p&gt;Those files were taken from &lt;a href="http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber"&gt;ROS Tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marek-gaw/meetup-python/blob/master/demo/1.%20rospy%20nodes/talker.py"&gt;talker_rospy&lt;/a&gt;, &lt;a href="https://github.com/marek-gaw/meetup-python/blob/master/demo/1.%20rospy%20nodes/listener.py"&gt;listener_rospy&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="demo-2"&gt;Demo 2&lt;a class="headerlink" href="#demo-2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Second demo was a little bit more complicated. I wanted to show how ROS may &amp;ldquo;talk&amp;rdquo; with non-ROS applications. &lt;/p&gt;
+&lt;p&gt;ROS provides at least two solutions: [ros_serial] and [rosbridge].&lt;/p&gt;
+&lt;p&gt;First is dedicated to communication with devices like Arduino, over UART port, second is better for applications, which are able to communicate over WebSockets. &lt;/p&gt;
+&lt;p&gt;I shown how to receive data from ROS topic with Python client (using websocket-client package) and with webpage with JS library.&lt;/p&gt;
+&lt;p&gt;Files:&lt;/p&gt;
+&lt;p&gt;Those files were taken from &lt;a href="http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality"&gt;rosbridge tutorial&lt;/a&gt;, and &lt;a href="http://stackoverflow.com/questions/29145442/threaded-non-blocking-websocket-client-in-python"&gt;this thread&lt;/a&gt; at Stack Overflow.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marek-gaw/meetup-python/blob/master/demo/2.%20ROS%20talks%20with%20Python%20app/web_client.html"&gt;websocket_page&lt;/a&gt;, &lt;a href="https://github.com/marek-gaw/meetup-python/blob/master/demo/2.%20ROS%20talks%20with%20Python%20app/python_app_client.py"&gt;websocket_python&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="demo-3"&gt;Demo 3&lt;a class="headerlink" href="#demo-3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Last demo was quite straightforward: I wanted to show how to use OpenCV in Python. Goal of this app was to detect green object and draw circle around it. &lt;/p&gt;
+&lt;p&gt;File:&lt;/p&gt;
+&lt;p&gt;File was taken from &lt;a href="http://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/"&gt;PyImageSearch blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/marek-gaw/meetup-python/blob/master/demo/3.%20Object%20tracking%20with%20OpenCV/ball_tracking.py"&gt;opencv_tracking&lt;/a&gt;&lt;/p&gt;</content><category term="General"></category><category term="Python"></category><category term="Meetup"></category><category term="ROS"></category><category term="OpenCV"></category><category term="Websockets"></category><category term="rosbridge"></category></entry><entry><title>Quick Tip: How to setup rosbridge</title><link href="https://marek-gaw.github.io/blog/2016/08/quick-tip-rosbridge-setup.html" rel="alternate"></link><published>2016-08-24T20:27:00+02:00</published><updated>2016-08-24T20:27:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-24:/blog/2016/08/quick-tip-rosbridge-setup.html</id><summary type="html"></summary><content type="html">&lt;p&gt;For last 3 days I tried to establish communication between ROS node and non-ROS application - in my case it was Python app.
+I was able to publish data to topic, but I was not able to receive any, despite of the fact, that rosbridge server accepted my request to subscribe to topic.&lt;/p&gt;
+&lt;p&gt;Finally, I found the solution in ![this topic on ROS Answers]. Basically, the problem is that, during rosbridge installation I have installed bson packet with pip. But I HAVE TO HAVE version from MongoDB package! So, basically&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip uninstall bson
+pip -m install pymongo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&amp;hellip;fixed my problem. &lt;/p&gt;
+&lt;p&gt;![this topic on ROS Answers]: https://answers.ros.org&lt;/p&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="rosbridge"></category></entry><entry><title>Camera in ROS Kinetic</title><link href="https://marek-gaw.github.io/blog/2016/08/camera-in-ros-kinetic.html" rel="alternate"></link><published>2016-08-20T18:24:00+02:00</published><updated>2016-08-20T18:24:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-20:/blog/2016/08/camera-in-ros-kinetic.html</id><summary type="html"></summary><content type="html">&lt;p&gt;How to make camera work in ROS Kinetic?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kientic-image-pipeline
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will install package &lt;a href="http://wik.ros.org/image-pipeline"&gt;image_pipeline&lt;/a&gt; which contains useful things.
+What we actually need is package image_view.&lt;/p&gt;
+&lt;p&gt;Second thing is usb_cam.
+Obviously, this one is not included in Kinetic&amp;hellip; So, we have to build it on our own.&lt;/p&gt;
+&lt;p&gt;So, lets compile usb_cam!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/bosch-ros-pkg/usb_cam.git
+catkin_make
+catkin_make -install
+roslaunch usb_cam usb_cam-test.launch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Robotics"></category><category term="ROS"></category></entry><entry><title>Quick tip: rqt plugins in ROS Kinetic</title><link href="https://marek-gaw.github.io/blog/2016/08/rqt-plugins-in-ROS-Kinetic.html" rel="alternate"></link><published>2016-08-15T12:00:00+02:00</published><updated>2016-08-15T12:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-15:/blog/2016/08/rqt-plugins-in-ROS-Kinetic.html</id><summary type="html">&lt;p&gt;I just tried to use rqt in ROS Kinetic and I found, that only one plugin is installed by default: Container.&lt;/p&gt;
+&lt;p&gt;I went trough some pages, and found some helpful info.&lt;/p&gt;
+&lt;p&gt;First of all, install additional packges with plugins:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-rqt*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If rqt is aware of installed plugins …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I just tried to use rqt in ROS Kinetic and I found, that only one plugin is installed by default: Container.&lt;/p&gt;
+&lt;p&gt;I went trough some pages, and found some helpful info.&lt;/p&gt;
+&lt;p&gt;First of all, install additional packges with plugins:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-rqt*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If rqt is aware of installed plugins, you will see them on the list:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rqt --list-plugins
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If this list is empty, or there is only few of plugins, force rqt to discover:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rqt --force-discover
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will also run rqt, and all installed plugins should be available.&lt;/p&gt;</content><category term="General"></category><category term="ROS"></category><category term="rqt"></category></entry><entry><title>Python Meetup: Python in Robotics</title><link href="https://marek-gaw.github.io/blog/2016/08/python-meetup-python-in-robotics.html" rel="alternate"></link><published>2016-08-13T18:00:00+02:00</published><updated>2016-08-11T18:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-13:/blog/2016/08/python-meetup-python-in-robotics.html</id><content type="html">&lt;p&gt;I was invited to show presentation about Python and robotics. The event will be hosted by local &lt;a href="https://www.meetup.com/Python-%C5%81od%C5%BA/"&gt;Python Łódź&lt;/a&gt; group.
+Evenryone&amp;rsquo;s invited, below you can find links to event:-)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.meetup.com/Python-%C5%81od%C5%BA/events/233305976/"&gt;Python Meetup&lt;/a&gt;&lt;/p&gt;</content><category term="General"></category><category term="Meetup"></category></entry><entry><title>ros_bridge and LabVIEW</title><link href="https://marek-gaw.github.io/blog/2016/08/ros_bridge-and-labview.html" rel="alternate"></link><published>2016-08-04T18:00:00+02:00</published><updated>2016-09-14T18:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-08-04:/blog/2016/08/ros_bridge-and-labview.html</id><summary type="html">&lt;p&gt;For now, rosbridge is not available as .deb package, so I need to compile it by myself.&lt;/p&gt;
+&lt;p&gt;Rosbridge can be cloned from GitHub:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/RobotWebTools/rosbridge_suite.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is a dependency with package &lt;em&gt;rosauth&lt;/em&gt; - this package also needs to be compiled manually.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;For now, rosbridge is not available as .deb package, so I need to compile it by myself.&lt;/p&gt;
+&lt;p&gt;Rosbridge can be cloned from GitHub:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/RobotWebTools/rosbridge_suite.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is a dependency with package &lt;em&gt;rosauth&lt;/em&gt; - this package also needs to be compiled manually.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/GT-RAIL/rosauth.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;What I found interesting, there is a dependency with Python package &lt;em&gt;bson&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip2 install bson
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I had to use pip2 explicitly as I have Python3 installed among Python2 on my laptop.&lt;/p&gt;
+&lt;p&gt;Basically, usual catkin build is sufficient to build both packages and run rosbridge server.&lt;/p&gt;
+&lt;h3 id="update"&gt;Update&lt;a class="headerlink" href="#update" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Since December 2017 rosbridge can be installed with apt as package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ros-kinetic-rosbridge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Robotics"></category><category term="ROS"></category><category term="LabVIEW"></category></entry><entry><title>Raspbian Jessie for Raspberry Pi 3</title><link href="https://marek-gaw.github.io/blog/2016/07/raspbian-jessie-for-raspberry-pi-3.html" rel="alternate"></link><published>2016-07-20T18:00:00+02:00</published><updated>2016-09-14T18:00:00+02:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-07-20:/blog/2016/07/raspbian-jessie-for-raspberry-pi-3.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo reboot
+sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+sudo apt-get install mplayer2 …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo reboot
+sudo apt-get install build-essential git cmake pkg-config
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk2.0-dev
+sudo apt-get install libatlas-base-dev gfortran
+sudo apt-get install mplayer2
+sudo apt-get install gstreamer1.0
+apt-get install libgstreamer1.0-0-dbg gstreamer1.0-tools libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad-dbg gstreamer1.0-omx gstreamer1.0-alsa
+sudo apt-get purge wolfram-engine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip opencv.zip
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+unzip opencv_contrib.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/opencv-3.1.0/
+mkdir build
+&lt;span class="nb"&gt;cd&lt;/span&gt; build
+cmake -D &lt;span class="nv"&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RELEASE &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;CMAKE_INSTALL_PREFIX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;INSTALL_C_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;OFF &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;INSTALL_PYTHON_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;OFF &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;OPENCV_EXTRA_MODULES_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;~/opencv_contrib-3.1.0/modules &lt;span class="se"&gt;\&lt;/span&gt;
+    -D &lt;span class="nv"&gt;BUILD_EXAMPLES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ON ..
+
+make -j4
+sudo make install
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ../..
+mkdir OCV
+&lt;span class="nb"&gt;cd&lt;/span&gt; OCV
+nano ocv_test.cpp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;quot;opencv2/opencv.hpp&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;cv&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;OpenCV version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Major version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_MAJOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Minor version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_MINOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Subminor version : &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;CV_SUBMINOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;CV_MAJOR_VERSION&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="c1"&gt;// Old OpenCV 2 code goes here.&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;
+  &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="c1"&gt;// New OpenCV 3 code goes here.&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;g++ &lt;span class="sb"&gt;`&lt;/span&gt;pkg-config --cflags opencv&lt;span class="sb"&gt;`&lt;/span&gt; ocv_test.cpp &lt;span class="sb"&gt;`&lt;/span&gt;pkg-config --libs opencv&lt;span class="sb"&gt;`&lt;/span&gt; -o ocv_test
+ocv_test
+
+pi@raspberrypi:~/OCV $ ./ocv_test
+OpenCV version : &lt;span class="m"&gt;3&lt;/span&gt;.1.0
+Major version : &lt;span class="m"&gt;3&lt;/span&gt;
+Minor version : &lt;span class="m"&gt;1&lt;/span&gt;
+Subminor version : &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pi@raspberrypi:~/OCV $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        14G  &lt;span class="m"&gt;6&lt;/span&gt;.6G  &lt;span class="m"&gt;6&lt;/span&gt;.0G  &lt;span class="m"&gt;53&lt;/span&gt;% /
+devtmpfs        459M     &lt;span class="m"&gt;0&lt;/span&gt;  459M   &lt;span class="m"&gt;0&lt;/span&gt;% /dev
+tmpfs           463M     &lt;span class="m"&gt;0&lt;/span&gt;  463M   &lt;span class="m"&gt;0&lt;/span&gt;% /dev/shm
+tmpfs           463M  &lt;span class="m"&gt;6&lt;/span&gt;.3M  457M   &lt;span class="m"&gt;2&lt;/span&gt;% /run
+tmpfs           &lt;span class="m"&gt;5&lt;/span&gt;.0M  &lt;span class="m"&gt;4&lt;/span&gt;.0K  &lt;span class="m"&gt;5&lt;/span&gt;.0M   &lt;span class="m"&gt;1&lt;/span&gt;% /run/lock
+tmpfs           463M     &lt;span class="m"&gt;0&lt;/span&gt;  463M   &lt;span class="m"&gt;0&lt;/span&gt;% /sys/fs/cgroup
+/dev/mmcblk0p6   63M   21M   43M  &lt;span class="m"&gt;33&lt;/span&gt;% /boot
+tmpfs            93M     &lt;span class="m"&gt;0&lt;/span&gt;   93M   &lt;span class="m"&gt;0&lt;/span&gt;% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="ros-indigo"&gt;ROS Indigo&lt;a class="headerlink" href="#ros-indigo" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Indigo%20on%20Raspberry%20Pi&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo sh -c &lt;span class="s1"&gt;&amp;#39;echo &amp;quot;deb http://packages.ros.org/ros/ubuntu jessie main&amp;quot; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&amp;#39;&lt;/span&gt;
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - &lt;span class="p"&gt;|&lt;/span&gt; sudo apt-key add -
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip python-setuptools python-yaml python-distribute python-docutils python-dateutil python-six
+sudo pip install rosdep rosinstall_generator wstool rosinstall
+sudo rosdep init
+rosdep update
+
+mkdir ~/ros_catkin_ws
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosinstall_generator ros_comm --rosdistro indigo --deps --wet-only --exclude roslisp --tar &amp;gt; indigo-ros_comm-wet.rosinstall
+wstool init src indigo-ros_comm-wet.rosinstall
+
+mkdir ~/ros_catkin_ws/external_src
+sudo apt-get install checkinstall cmake
+sudo sh -c &lt;span class="s1"&gt;&amp;#39;echo &amp;quot;deb-src http://mirrordirector.raspbian.org/raspbian/ testing main contrib non-free rpi&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&amp;#39;&lt;/span&gt;
+sudo apt-get update
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws/external_src
+sudo apt-get build-dep console-bridge
+apt-get &lt;span class="nb"&gt;source&lt;/span&gt; -b console-bridge
+sudo dpkg -i libconsole-bridge0.2*.deb libconsole-bridge-dev_*.deb
+
+apt-get &lt;span class="nb"&gt;source&lt;/span&gt; -b lz4
+sudo dpkg -i liblz4-*.deb
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:jessie
+sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;Release --install-space /opt/ros/indigo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;source&lt;/span&gt; /opt/ros/indigo/setup.bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;http://answers.ros.org/question/219575/raspberry-pi2-roscpp-failed-during-indigo-installation/
+CONF_SWAPSIZE=1024&lt;/p&gt;
+&lt;p&gt;liburdfdom-headers-dev:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;ros_catkin_ws&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;external_src&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ros&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;urdfdom_headers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;urdfdom_headers&lt;/span&gt;
+&lt;span class="n"&gt;cmake&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;checkinstall&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+
+   &lt;span class="k"&gt;When&lt;/span&gt; &lt;span class="k"&gt;check&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;asks&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;needs&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;urdfdom-headers&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;liburdfdom-headers-dev&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;otherwise&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;rosdep&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;wont&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;liburdfdom-dev:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;ros_catkin_ws&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;external_src&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;libboost&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;libtinyxml&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ros&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;urdfdom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;urdfdom&lt;/span&gt;
+&lt;span class="n"&gt;cmake&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;checkinstall&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+
+
+&lt;span class="n"&gt;Adding&lt;/span&gt; &lt;span class="n"&gt;Released&lt;/span&gt; &lt;span class="n"&gt;Packages&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You may add additional packages to the installed ros workspace that have been released into the ros ecosystem. First, a new rosinstall file must be created including the new packages (Note, this can also be done at the initial install). For example, if we have installed ros_comm, but want to add ros_control and joystick_drivers, the command would be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/ros_catkin_ws
+rosinstall_generator ros_comm ros_control joystick_drivers --rosdistro indigo --deps --wet-only --exclude roslisp --tar &amp;gt; indigo-custom_ros.rosinstall
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You may keep listing as many ROS packages as you&amp;rsquo;d like separated by spaces.&lt;/p&gt;
+&lt;p&gt;Next, update the workspace with wstool:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wstool merge -t src indigo-custom_ros.rosinstall
+wstool update -t src
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After updating the workspace, you may want to run rosdep to install any new dependencies that are required:&lt;/p&gt;
+&lt;p&gt;Raspbian Wheezy:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:wheezy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Raspbian Jessie:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rosdep install --from-paths src --ignore-src --rosdistro indigo -y -r --os&lt;span class="o"&gt;=&lt;/span&gt;debian:jessie
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, now that the workspace is up to date and dependencies are satisfied, rebuild the workspace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE&lt;span class="o"&gt;=&lt;/span&gt;Release --install-space /opt/ros/indigo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Embedded"></category><category term="Raspberry"></category><category term="Linux"></category></entry><entry><title>MAXimator - easy start with FPGA</title><link href="https://marek-gaw.github.io/blog/2016/03/maximator-easy-start-with-fpga.html" rel="alternate"></link><published>2016-03-17T10:05:59-01:00</published><updated>2016-03-17T10:05:59-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-03-17:/blog/2016/03/maximator-easy-start-with-fpga.html</id><summary type="html">&lt;p&gt;From time to time I think about getting familar with FPGA, but once I have checked prices of development boards, I gave up.&lt;/p&gt;
+&lt;p&gt;Few days ago on &lt;a class="reference external" href="http://mikrokontroler.pl"&gt;mikrokontroler.pl&lt;/a&gt; I found an information about development kit, that siuts my needs: it is based on FPGA, simple and cheap. A day …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From time to time I think about getting familar with FPGA, but once I have checked prices of development boards, I gave up.&lt;/p&gt;
+&lt;p&gt;Few days ago on &lt;a class="reference external" href="http://mikrokontroler.pl"&gt;mikrokontroler.pl&lt;/a&gt; I found an information about development kit, that siuts my needs: it is based on FPGA, simple and cheap. A day later it was on the way to me:-)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://maximator-fpga.org/"&gt;MAXimator&lt;/a&gt; is low price FPGA development board released recently by Kamami Labs in cooperation with EBVElektronik, NCAB Group, Altera and Semicon.&lt;/p&gt;
+&lt;p&gt;Drivef for USB Blaster had to be installed manually (available in Quartus folder under drivers/usb-blaster)&lt;/p&gt;
+&lt;p&gt;Top view&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/2.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Programator: USB Blaster - 'official' clone&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/1.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Heart of this development board: Altera MAX10 (10M08DAF256C8GES)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/3.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Expander by &lt;a class="reference external" href="https://kamami.com"&gt;Kamami&lt;/a&gt; with 4 7-segment LED, 2 push buttons and 2 WS1280 RGB LEDs&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/4.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Side view (with expander)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/5.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Bottom view (with expander). HDMI connector is visible&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/6.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Top view (with expander)&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/7.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Whole setup, box&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/maximator/9.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;The board is programmed by default with exapmle, which uses most of features: LEDs, pusbuttons, VGA.&lt;/p&gt;
+&lt;p&gt;For now, I need to get familiar with VHDL, and go through Arduino shileds that I have, to check, which of them might be used with MAXimator (only ones supplied with 3V3).&lt;/p&gt;
+</content><category term="Embedded"></category><category term="DYI"></category><category term="FPGA"></category></entry><entry><title>Robotics Toolbox and V-REP</title><link href="https://marek-gaw.github.io/blog/2016/02/robotics-toolbox-and-v-rep.html" rel="alternate"></link><published>2016-02-07T10:50:28-01:00</published><updated>2016-02-07T10:50:28-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-02-07:/blog/2016/02/robotics-toolbox-and-v-rep.html</id><summary type="html">&lt;p&gt;Recently I finally managed to fix communication between Matlab and V-REP.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Short introduction:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://petercorke.com/Toolboxes.html"&gt;Robotics Toolbox&lt;/a&gt; : Peter Corke created great tool: RTB, which is toolbox for Matlab.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://coppeliarobotics.com"&gt;V-REP&lt;/a&gt; : V-REP by Coppelia Robotics is simulation environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RTB has an option to communicate with V-REP as visualization tool.&lt;/p&gt;
+&lt;p&gt;I tried to run vrepdemo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I finally managed to fix communication between Matlab and V-REP.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Short introduction:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://petercorke.com/Toolboxes.html"&gt;Robotics Toolbox&lt;/a&gt; : Peter Corke created great tool: RTB, which is toolbox for Matlab.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://coppeliarobotics.com"&gt;V-REP&lt;/a&gt; : V-REP by Coppelia Robotics is simulation environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;RTB has an option to communicate with V-REP as visualization tool.&lt;/p&gt;
+&lt;p&gt;I tried to run vrepdemo.m form RTB but I have encountered a problem with running it. My problem and solution was described on Google Groups: &lt;a class="reference external" href="https://groups.google.com/forum/#!topic/robotics-tool-box/-kvbV0Pyajc"&gt;Robotics and Machine Vision Toolboxes&lt;/a&gt;&lt;/p&gt;
+</content><category term="Robotics"></category><category term="V-REP"></category><category term="RTB"></category><category term="Matlab"></category></entry><entry><title>QNX vs. Linux (part 1)</title><link href="https://marek-gaw.github.io/blog/2016/02/qnx-vs-linux-part-1.html" rel="alternate"></link><published>2016-02-06T11:11:15-01:00</published><updated>2016-02-06T11:11:15-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-02-06:/blog/2016/02/qnx-vs-linux-part-1.html</id><summary type="html">&lt;p&gt;Few days ago I saw post on LinkedIn, which redirected me to &lt;a class="reference external" href="http://jahoffmann.com/2016/02/03/whitepaper-total-cost-of-ownership-linux-vs-qnx-part1/"&gt;this post&lt;/a&gt; and finally, to &lt;a class="reference external" href="http://www.qnx.com/download/feature.html?programid=27444"&gt;this article&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;This article is a copmarision of two OSes, used in Automotive: QNX and Linux. There will be three parts: for now, only first was published.&lt;/p&gt;
+&lt;p&gt;I encourage everyone to read the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few days ago I saw post on LinkedIn, which redirected me to &lt;a class="reference external" href="http://jahoffmann.com/2016/02/03/whitepaper-total-cost-of-ownership-linux-vs-qnx-part1/"&gt;this post&lt;/a&gt; and finally, to &lt;a class="reference external" href="http://www.qnx.com/download/feature.html?programid=27444"&gt;this article&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;This article is a copmarision of two OSes, used in Automotive: QNX and Linux. There will be three parts: for now, only first was published.&lt;/p&gt;
+&lt;p&gt;I encourage everyone to read the document, it is available for free.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Linux"></category><category term="QNX"></category></entry><entry><title>Banana Pi M2 - first attempt</title><link href="https://marek-gaw.github.io/blog/2016/01/banana-pi-m2-first-attempt.html" rel="alternate"></link><published>2016-01-21T20:46:38-01:00</published><updated>2016-01-21T20:46:38-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-21:/blog/2016/01/banana-pi-m2-first-attempt.html</id><summary type="html">&lt;p&gt;Recently, I tried to make up and running brand new BananaPi M2.&lt;/p&gt;
+&lt;p&gt;My goal was to make dedicated camera (using CSI interface) work. TLDR: I have failed.&lt;/p&gt;
+&lt;p&gt;It looks like it is very important to distinct M2 version from BananaPi M1, plus or Pro. It seems that M2 is made …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I tried to make up and running brand new BananaPi M2.&lt;/p&gt;
+&lt;p&gt;My goal was to make dedicated camera (using CSI interface) work. TLDR: I have failed.&lt;/p&gt;
+&lt;p&gt;It looks like it is very important to distinct M2 version from BananaPi M1, plus or Pro. It seems that M2 is made by different company and for sure, it is not compatibile with older verisons. This was especially deceptive for me, because I have lost a lot of time until I finally figured it out.&lt;/p&gt;
+&lt;p&gt;It seems that there is no official Linux distribution, which will support all hardware on the board. I found some sane solutions like Armbian or Bananian, but they are still not considered as stable (at least by autors).&lt;/p&gt;
+&lt;p&gt;Installation of both is quite straight-forward: download, unzip, dd image on microSD card, and run. Simple, no magic here.&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.armbian.com/banana-pi-m2/"&gt;Armbian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.bananian.org/news#bananian_linux_for_banana_pi_m2_-_2015-12-23"&gt;Bananian&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bad news is that I haven't found a way to make camera work. From what I read, there is no hope, because support from manufactuer is bad or non-existent. Additionally, OV chip used in this camera is not supported by mainline Linux kernels.&lt;/p&gt;
+&lt;p&gt;All in all, I switched to ususal webcam, connected over USB.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="BananaPi"></category><category term="Armbian"></category><category term="Bananian"></category></entry><entry><title>Led cube</title><link href="https://marek-gaw.github.io/blog/2016/01/led-cube.html" rel="alternate"></link><published>2016-01-09T10:00:13-01:00</published><updated>2016-01-09T10:00:13-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-09:/blog/2016/01/led-cube.html</id><summary type="html">&lt;p&gt;Some time ago I decided to build my own led cube. This one is of size 4x4x4 and all leds are blue. Whole thing is controlled by Arduino UNO.
+Take a look at some pictures below.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104559.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104608.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_105408.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Some time ago I decided to build my own led cube. This one is of size 4x4x4 and all leds are blue. Whole thing is controlled by Arduino UNO.
+Take a look at some pictures below.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104559.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104608.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_105408.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_111506.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_112716.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150806_194512.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174304.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174337.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174400.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112341.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112458.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112509.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112528.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+</content><category term="DYI"></category><category term="electronics"></category><category term="DYI"></category><category term="led cube"></category></entry><entry><title>Panel Builder: jmx files</title><link href="https://marek-gaw.github.io/blog/2016/01/panel-builder-jmx-files.html" rel="alternate"></link><published>2016-01-06T13:08:22+01:00</published><updated>2016-01-06T13:08:22+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-06:/blog/2016/01/panel-builder-jmx-files.html</id><summary type="html">&lt;p&gt;There is one good thing about files format in Panel Builder projects: they are text files.&lt;/p&gt;
+&lt;p&gt;Firsrt of all, I can use Git or any other Source Control Manager and store them easily. Obviously, I can do the same with binary files, but on text files I can do diff …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There is one good thing about files format in Panel Builder projects: they are text files.&lt;/p&gt;
+&lt;p&gt;Firsrt of all, I can use Git or any other Source Control Manager and store them easily. Obviously, I can do the same with binary files, but on text files I can do diff.&lt;/p&gt;
+&lt;p&gt;Pages in Panel Builder are saved as jmx files, which are plain XMLs. Why is this so important to me? I have created some screens (pages) with a lot of labels and fields. What is important, I had already imported tags, so the only task was to copy/paste widgets and connect tags: sounds like wasted hours for clicking.&lt;/p&gt;
+&lt;p&gt;But here comes Notepad++ for the rescue: what if I open jmx file in text editor and change connected tags with find/replace mechanism? If someone is keen on regexps - it is better.&lt;/p&gt;
+&lt;p&gt;So, let's see an example, how I did it.&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;XML&lt;/p&gt;
+&lt;p class="last"&gt;&amp;lt;object class=&amp;quot;NumericWgt&amp;quot; id=&amp;quot;field15&amp;quot;&amp;gt;
+&amp;lt;wgtStyle font-family=&amp;quot;Tahoma&amp;quot; font-sizepx=&amp;quot;21&amp;quot; cx=&amp;quot;23&amp;quot; cy=&amp;quot;9&amp;quot; step=&amp;quot;1&amp;quot; timeSpec=&amp;quot;local&amp;quot; alignment=&amp;quot;center&amp;quot; x=&amp;quot;280&amp;quot; y=&amp;quot;250&amp;quot;
+vert-align=&amp;quot;middle&amp;quot; frameFill=&amp;quot;rgb(0,0,255)&amp;quot; text=&amp;quot;99999&amp;quot; max=&amp;quot;32767&amp;quot; usingFormat=&amp;quot;#&amp;quot; value=&amp;quot;99999&amp;quot; keypad-type=&amp;quot;Numeric&amp;quot;
+font-color=&amp;quot;rgb(255,255,0)&amp;quot; min=&amp;quot;-32768&amp;quot; width=&amp;quot;62&amp;quot; readWrite=&amp;quot;true&amp;quot; height=&amp;quot;26&amp;quot; form=&amp;quot;Numeric&amp;quot; frame=&amp;quot;true&amp;quot; font-size=&amp;quot;16&amp;quot;/&amp;gt;
+&amp;lt;dataLinks&amp;gt;
+&amp;lt;dataLink readWrite=&amp;quot;R/W&amp;quot; attribute=&amp;quot;value&amp;quot; tag=&amp;quot;Recipe.CurrentSelectedSet.PARAM_1.Value&amp;quot; class=&amp;quot;RecipeMgrWgt&amp;quot; widgetType=&amp;quot;Project&amp;quot;
+sourceType=&amp;quot;Recipe&amp;quot; dataSource=&amp;quot;_RecipeMgr&amp;quot;/&amp;gt;
+&amp;lt;/dataLinks&amp;gt;
+&amp;lt;/object&amp;gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;On my screen, there were 30 widgets as such. The only difference in configuration, except position, was&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;XML&lt;/p&gt;
+&lt;p class="last"&gt;tag=&amp;quot;Recipe.CurrentSelectedSet.PARAM_1.Value&amp;quot;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My recipe has 30 elements named: PARAM_1 .:PARAM_30, so I have hanged it manually.&lt;/p&gt;
+&lt;p&gt;Obviously, this method is &amp;quot;unofficial&amp;quot;, so just after editing I had to check in Properties if all connections are correct, and if project works (at least in simulator). There is a chance to refer to non-existing tag, and there will be no warning!&lt;/p&gt;
+&lt;p&gt;One last remark is: Panel Builder does not see changes made externally in jmx files while is running, so my advice is to save project, close Panel Builder, do changes and check them in Panel Builder. This will also saves us from errors by making changes in the same file in two different, unsynchronized tools.&lt;/p&gt;
+</content><category term="Automation"></category><category term="ABB"></category><category term="Panel Builder"></category><category term="HMI"></category><category term="jmx"></category></entry><entry><title>ABB Panel Builder: page title</title><link href="https://marek-gaw.github.io/blog/2015/11/abb-panel-builder-page-title.html" rel="alternate"></link><published>2015-11-24T08:41:24+01:00</published><updated>2015-11-24T08:41:24+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2015-11-24:/blog/2015/11/abb-panel-builder-page-title.html</id><summary type="html">&lt;p&gt;Few days ago I have been working on project of operator panel for industrial machine. I've done it with CP655 panel, made by ABB, and software was created with Panel Builder 600.&lt;/p&gt;
+&lt;p&gt;The software is based on some old Visual Studio (2005 or 2008) in the same way, as a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few days ago I have been working on project of operator panel for industrial machine. I've done it with CP655 panel, made by ABB, and software was created with Panel Builder 600.&lt;/p&gt;
+&lt;p&gt;The software is based on some old Visual Studio (2005 or 2008) in the same way, as a lot of software is build on top of Eclipse.&lt;/p&gt;
+&lt;p&gt;In this and few next posts I'll try to show some tips how to use it, where are catches and so on. But for now, let's start from something very easy: how to show name of current screen?&lt;/p&gt;
+&lt;p&gt;My first idea was to create field on the template and connect it with system tag, which contains name of the page. Unfortunately, there is no such thing (in fact I'm not sure if it exist i.e. in WinCC flexible/TIA Portal).&lt;/p&gt;
+&lt;p&gt;Anyway, I solved it with simple workaround. I created internal tag (before it, protocol needs to be added!), and field on the template (just for convinience, to be sure that filed will be allways there) connected to it. Next step was what I'm not very proud of: on every screen I added action OnDisplay, which is executed every time screen is shown. In this action name of screen is written to tag.
+I don't like this solution, because it requires manual actions, like adding action to the new screen, and typing name of screen. If I will have enough time, I'll try to do the same with JavaScript.&lt;/p&gt;
+</content><category term="Automation"></category><category term="ABB"></category><category term="Panel Builder"></category><category term="HMI"></category></entry><entry><title>Loadable kernel modules and Raspberry Pi</title><link href="https://marek-gaw.github.io/blog/2015/11/loadable-kernel-modules-and-raspberry-pi.html" rel="alternate"></link><published>2015-11-18T07:20:02-01:00</published><updated>2015-11-18T07:20:02-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2015-11-18:/blog/2015/11/loadable-kernel-modules-and-raspberry-pi.html</id><summary type="html">&lt;p&gt;Recently, I have been playing with Raspberry Pi. My goal was to blink with LED - seems so simple, right? To make it a little harder, I choose to make it via loadable kernel module.&lt;/p&gt;
+&lt;p&gt;First problem that I had encounter was difference between version of kernel sources, that are available …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I have been playing with Raspberry Pi. My goal was to blink with LED - seems so simple, right? To make it a little harder, I choose to make it via loadable kernel module.&lt;/p&gt;
+&lt;p&gt;First problem that I had encounter was difference between version of kernel sources, that are available at GitHub (&lt;a class="reference external" href="https://github.com/raspberrypi/linux"&gt;https://github.com/raspberrypi/linux&lt;/a&gt;) and kernel version available in Raspbian Jessie (for Nov 2015 it is 4.1.12 vs 4.1.7+). Difference looks small but in fact makes simplest possible modules not working at all.&lt;/p&gt;
+&lt;p&gt;Finally, I made it work. The key was post, found on the Internet with step-by-step instruction, how to make Raspian Jessie work with current kernel sources. Post: &lt;a class="reference external" href="https://sites.google.com/site/thepihacker/pimodules"&gt;https://sites.google.com/site/thepihacker/pimodules&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This time cross compilation was not a problem. Because I had been using Ubunutu 64bit, I chose to use official toolchain, made by Linaro (available at Gitub: &lt;a class="reference external" href="https://github.com/raspberrypi/tools"&gt;https://github.com/raspberrypi/tools&lt;/a&gt;). Fortunately, version of cross compiler matched version of compiler used to build kernel in Raspbian (this version checking is also a part of the process of preparation described in post, mentioned above).
+It seems that making simple loadable kernel module was not as hard as environment setup, which is quite supprising to me. Anyway, now I am able do blink LED diode with kernel module.&lt;/p&gt;
+</content><category term="Linux"></category><category term="Raspberry Pi"></category><category term="Kernel"></category><category term="Kernel drivers"></category></entry><entry><title>How to control GPIOs on Raspberry Pi with console commands</title><link href="https://marek-gaw.github.io/blog/2015/11/how-to-control-gpios-on-raspberry-pi-with-console-commands.html" rel="alternate"></link><published>2015-11-15T18:36:19-01:00</published><updated>2015-11-15T18:36:19-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2015-11-15:/blog/2015/11/how-to-control-gpios-on-raspberry-pi-with-console-commands.html</id><summary type="html">&lt;p&gt;While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi).
+So, my first attempt was quite straight forward (you may find this solution …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While I was preparing presentation about Raspberry Pi, I wanted to control GPIO state via console commands. It should be quite easy, as GPIO driver is already part of the kernel (at least in case of RPi).
+So, my first attempt was quite straight forward (you may find this solution on the Internet):&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;bash&lt;/p&gt;
+&lt;p class="last"&gt;echo 18 &amp;gt; /sys/class/gpio/export
+echo out &amp;gt; /sys/class/gpio/gpio18/direction
+echo 1 &amp;gt; /sys/class/gpio/gpio18/value
+echo 0 &amp;gt; /sys/class/gpio/gpio18/value
+echo o18 &amp;gt; /sys/class/gpio/unexport&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Looks nice, right? Obviously, there is a catch: permissions. Everything was ok unless I tried to set value to 1: at this point, RPi decided to not cooperate and reject my kind request with &amp;quot;Permission denied&amp;quot;.&lt;/p&gt;
+&lt;p&gt;But then I have found post by user jojopi at raspberrypi.org (&lt;a class="reference external" href="https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;amp;f=5"&gt;https://www.raspberrypi.org/forums/viewtopic.php?t=5185&amp;amp;f=5&lt;/a&gt;) which led me to the right solution.&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;code-block::&lt;/th&gt;&lt;td class="field-body"&gt;&lt;p class="first"&gt;bash&lt;/p&gt;
+&lt;p class="last"&gt;sudo sh -c 'echo 18 &amp;gt; /sys/class/gpio/export'
+sudo sh -c 'echo out &amp;gt; /sys/class/gpio/gpio18/direction'
+sudo sh -c 'echo 1 &amp;gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo 0 &amp;gt; /sys/class/gpio/gpio18/value'
+sudo sh -c 'echo o18 &amp;gt; /sys/class/gpio/unexport'&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Tadaaaaa, it works.
+The catch is opeator &amp;quot;&amp;gt;&amp;quot; which looks like to be immune to sudo.&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Raspberry Pi"></category><category term="Linux"></category><category term="Kernel"></category></entry></feed>

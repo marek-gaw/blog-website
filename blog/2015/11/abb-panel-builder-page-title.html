@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="Few days ago I have been working on project of operator panel for industrial machine. I&#39;ve done it with CP655 panel, made by ABB, and software was created with Panel Builder 600. The software is based on some old Visual Studio (2005 or 2008) in the same way, as a …" />
+<meta name="keywords" content="ABB, Panel Builder, HMI">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="ABB Panel Builder: page title"/>
+<meta property="og:description" content="Few days ago I have been working on project of operator panel for industrial machine. I&#39;ve done it with CP655 panel, made by ABB, and software was created with Panel Builder 600. The software is based on some old Visual Studio (2005 or 2008) in the same way, as a …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2015/11/abb-panel-builder-page-title.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-11-24 08:41:24+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Automation"/>
+<meta property="article:tag" content="ABB"/>
+<meta property="article:tag" content="Panel Builder"/>
+<meta property="article:tag" content="HMI"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; ABB Panel Builder: page title</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="abb-panel-builder-page-title">ABB Panel Builder: page title</h1>
+    <p>
+      Posted on wto 24 listopada 2015 in <a href="../../../category/automation.html">Automation</a>
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Few days ago I have been working on project of operator panel for industrial machine. I've done it with CP655 panel, made by ABB, and software was created with Panel Builder 600.</p>
+<p>The software is based on some old Visual Studio (2005 or 2008) in the same way, as a lot of software is build on top of Eclipse.</p>
+<p>In this and few next posts I'll try to show some tips how to use it, where are catches and so on. But for now, let's start from something very easy: how to show name of current screen?</p>
+<p>My first idea was to create field on the template and connect it with system tag, which contains name of the page. Unfortunately, there is no such thing (in fact I'm not sure if it exist i.e. in WinCC flexible/TIA Portal).</p>
+<p>Anyway, I solved it with simple workaround. I created internal tag (before it, protocol needs to be added!), and field on the template (just for convinience, to be sure that filed will be allways there) connected to it. Next step was what I'm not very proud of: on every screen I added action OnDisplay, which is executed every time screen is shown. In this action name of screen is written to tag.
+I don't like this solution, because it requires manual actions, like adding action to the new screen, and typing name of screen. If I will have enough time, I'll try to do the same with JavaScript.</p>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/abb.html">ABB</a>
+      <a href="../../../tag/panel-builder.html">Panel Builder</a>
+      <a href="../../../tag/hmi.html">HMI</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

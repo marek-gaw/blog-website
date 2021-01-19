@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-108896043-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="" />
+<meta name="keywords" content="ROS, V-REP">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="ROS Kinetic and V-REP 3.3.2"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2016/09/ros-kinetic-and-v-rep-3.3.2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-09-19 18:35:00+02:00"/>
+<meta property="article:modified_time" content="2016-09-19 18:35:00+02:00"/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Robotics"/>
+<meta property="article:tag" content="ROS"/>
+<meta property="article:tag" content="V-REP"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; ROS Kinetic and V-REP 3.3.2</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ros-kinetic-and-v-rep-3.3.2">ROS Kinetic and V-REP 3.3.2</h1>
+    <p>
+      Posted on pon 19 września 2016 in <a href="../../../category/robotics.html">Robotics</a>
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>I wanted to connect my V-REP simulation to ROS. Obviously, since Kinetic anything is simple, so I had to go through some steps, to make it work.</p>
+<p>There is always <a href="http://wiki.ros.org/vrep_ros_bridge">vrep_ros_bridge</a> page, but for now there is no information about migration to Kinetic.Anyway, <a href="https://github.com/lagadic/vrep_ros_bridge">this tutorial on GitHub</a> seems to be up-to-date, and most of steps are the same/similiar to what I described below.</p>
+<p>I assume, that ROS workspace is already created in ~/ROS/ws_vrep.</p>
+<ol>
+<li>We need to grab the code:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> src
+git clone https://github.com/lagadic/vrep_ros_bridge.git
+git checkout master
+</code></pre></div>
+
+
+<p>It is better to checkout on master rather than *-devel branch, as they seem to be dedicated to different ROS distribution.</p>
+<ol>
+<li>Install V-REP </li>
+</ol>
+<p>We need to have our V-REP unpacked somewhere and create env with path:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">VREP_ROOT_DIR</span><span class="o">=</span>&lt;path_to_vrep_directory&gt;
+</code></pre></div>
+
+
+<ol>
+<li>Install gazebo messages</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo apt install ros-kinetic-gazebo-msgs
+</code></pre></div>
+
+
+<ol>
+<li>Supress Telekyb by creating CATKIN_IGNORE file</li>
+</ol>
+<p>vrep_ros_bridge was designed to simulate quadrocopter with Telekyb controller. Since this is not relevant, it is better to tell CMake to ignore it.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> src/vrep_ros_bridge/quadrotor_tk_hander
+touch CATKIN_IGNORE
+</code></pre></div>
+
+
+<ol>
+<li>Stop! Catkin time!</li>
+</ol>
+<p>One important info: if workspace was already initialized by catkin_make, it has to be deleted (devel directory) and initialized again.</p>
+<div class="highlight"><pre><span></span><code>sudo apt install python-catkin-tools
+<span class="nb">source</span> /opt/ros/kinetic/setup.bash
+<span class="o">[</span>in ROS/ws_vrep<span class="o">]</span>
+<span class="nb">source</span> devel/setup.bash
+catkin build
+</code></pre></div>
+
+
+<ol>
+<li>Almost there: building vrep_ros_bridge</li>
+</ol>
+<div class="highlight"><pre><span></span><code>catkin build --no-deps vrep_ros_bridge --cmake-args -DCMAKE_BUILD_TYPE<span class="o">=</span>RelWithDebInfo
+</code></pre></div>
+
+
+<ol>
+<li>Needed symboilc links</li>
+</ol>
+<p>Obviously, &hellip; has to be replaced by proper path.</p>
+<div class="highlight"><pre><span></span><code>ln -s /home/.../ROS/ws_vrep/devel/lib/libv_repExtRosBridge.so /home/.../V-REP_PRO_EDU_V3_3_2_64_Linux
+ln -s compiledRosPlugins/libv_repExtRos.so
+</code></pre></div>
+
+
+<p>Official VREP tutorial advises to copy files, but I prefer to symlink them.</p>
+<ol>
+<li>First crash</li>
+</ol>
+<p>Sorry, for me first run was crash.
+Plugin cant be loaded, so I checked out what was happening&hellip; Error message told me that there is no boost_system library - which was obviously not true. To solve this, I just need to compile RosInterface and RosPlugin in Vrep by myself. Easy? Easy.</p>
+<p>Code is in vrep/programming/ros_packages.</p>
+<p>compilation process is described at <a href="http://www.coppeliarobotics.com/helpFiles/en/rosTutorialIndigo.htm">Coopelia</a></p>
+<p>I prefer to make symlinks instead of copying files, so at the end I just made symliks for libv_repExtRos.so and libv_repExtRosInterface.so</p>
+<ol>
+<li>It still does not work? Is vrep_bridge_plugin package installed in ros?</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> /ROS/ws_vrep/devel/setup.bash
+</code></pre></div>
+
+
+<p>Thanks to this, ROS-specific envs are set, so V-REP can start and run ROS-enabled simulation.</p>
+<p>It&rsquo;s a dirty trick, but untill I will find how to install package with catkin build</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/ros.html">ROS</a>
+      <a href="../../../tag/v-rep.html">V-REP</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

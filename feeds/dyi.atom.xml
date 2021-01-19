@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff - DYI</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/dyi.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2016-01-09T10:00:13-01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Led cube</title><link href="https://marek-gaw.github.io/blog/2016/01/led-cube.html" rel="alternate"></link><published>2016-01-09T10:00:13-01:00</published><updated>2016-01-09T10:00:13-01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2016-01-09:/blog/2016/01/led-cube.html</id><summary type="html">&lt;p&gt;Some time ago I decided to build my own led cube. This one is of size 4x4x4 and all leds are blue. Whole thing is controlled by Arduino UNO.
+Take a look at some pictures below.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104559.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104608.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_105408.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Some time ago I decided to build my own led cube. This one is of size 4x4x4 and all leds are blue. Whole thing is controlled by Arduino UNO.
+Take a look at some pictures below.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104559.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_104608.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_105408.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_111506.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150613_112716.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150806_194512.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174304.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174337.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150813_174400.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112341.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112458.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112509.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="alternative text" src="https://marek-gaw.github.io/images/ledcube/IMG_20150829_112528.jpg" /&gt;
+&lt;/div&gt;
+&lt;p&gt;bla bla bla
+bla bla bla&lt;/p&gt;
+</content><category term="DYI"></category><category term="electronics"></category><category term="DYI"></category><category term="led cube"></category></entry></feed>
