@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../../../theme/pygments/perldoc.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../theme/font-awesome/css/solid.css">
+
+
+    <link href="https://marek-gaw.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Embedded Stuff Atom">
+
+
+
+  
+
+
+<meta name="author" content="Marek Gawryszewski" />
+<meta name="description" content="Azure Sphere SDK installation on Linux" />
+<meta name="keywords" content="Azure Sphere, IoT, SDK, Linux">
+
+
+<meta property="og:site_name" content="Embedded Stuff"/>
+<meta property="og:title" content="Azure Sphere: SDK installation on Linux (Mint 19.3 or Ubuntu 18.04 LTS)"/>
+<meta property="og:description" content="Azure Sphere SDK installation on Linux"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../blog/2021/01/azure-sphere:-sdk-installation-on-linux-(mint-19.3-or-ubuntu-18.04-lts).html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-01-27 17:18:00+01:00"/>
+<meta property="article:modified_time" content="2021-01-27 20:20:00+01:00"/>
+<meta property="article:author" content="../../../author/marek-gawryszewski.html">
+<meta property="article:section" content="Embedded"/>
+<meta property="article:tag" content="Azure Sphere"/>
+<meta property="article:tag" content="IoT"/>
+<meta property="article:tag" content="SDK"/>
+<meta property="article:tag" content="Linux"/>
+<meta property="og:image" content="">
+
+  <title>Embedded Stuff &ndash; Azure Sphere: SDK installation on Linux (Mint 19.3 or Ubuntu 18.04 LTS)</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../../..">
+        <img src="../../../theme/img/profile.png" alt="Embedded Stuff" title="Embedded Stuff">
+      </a>
+
+      <h1>
+        <a href="../../..">Embedded Stuff</a>
+      </h1>
+
+<p>Embedded, Linux, Cloud, IoT, Automation</p>
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://www.meetup.com/LodzCEHUG/" >CEHUG</a>
+            </li>
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/marekgawryszewski-2617972" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/marek-gaw" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://marek-gaw.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="azure-sphere:-sdk-installation-on-linux-(mint-19.3-or-ubuntu-18.04-lts)">Azure Sphere: SDK installation on Linux (Mint 19.3 or Ubuntu 18.04 LTS)</h1>
+    <p>
+      Posted on śro 27 stycznia 2021 in <a href="../../../category/embedded.html">Embedded</a>
+
+        &#8226; 4 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Finally I got my <a href="https://www.element14.com/community/community/designcenter/azure-sphere-starter-kits">Azure Sphere Starter Kit</a> and I started to prepare my development environment. It seems that Microsoft has everything prepared, so installation of SDK is pretty easy and automated.</p>
+<p>My OS is Linux Mint 19.3 based on Ubuntu 18.04 LTS. Steps shown below are more or less the same as described in <a href="https://docs.microsoft.com/en-us/azure-sphere/install/install-sdk-linux?pivots=vs-code-linux">Official documentation</a> with some comments.</p>
+<p>First, let&rsquo;s refresh state of repositories and install required tooling.</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt-get install -y net-tools curl
+</code></pre></div>
+
+
+<p>Next step is to download script, which will download SDK and install it in <code>/opt/azuresphere</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download installer script</span>
+wget --show-progress -O install_azure_sphere_sdk_2011.tar.gz https://aka.ms/AzureSphereSDKInstall/Linux
+
+<span class="c1"># Problem that I encountered: missing dependencies</span>
+$ ./install_azure_sphere_sdk.sh
+
+logname: brak nazwy użytkownika
+ERROR: Required package <span class="s1">&#39;libgcc-s1&#39;</span> missing.
+ERROR: Required package check failed. Please install missing packages and retry:
+    sudo apt-get install -y libgcc-s1
+Azure Sphere SDK installation cancelled.
+
+sudo apt-get install -y libgcc-s1
+
+Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności       
+Odczyt informacji o stanie... Gotowe
+E: Nie udało się odnaleźć pakietu libgcc-s1
+</code></pre></div>
+
+
+<p>It seems strange: there is library libgcc-s1 wich is required, but it seems that default set of repositories for Mint/Ubuntu 18.04 does not contain it.</p>
+<p>After a couple of minutes I found <a href="https://github.com/f4exb/sdrangel/issues/524">this GH issue</a> which pointed out that GCC 10 has to be installed. I dobut if this solution is optimal, but I wanted to quickly overcome the problem.</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install software-properties-common
+sudo apt-get update
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt install gcc-10
+</code></pre></div>
+
+
+<p>After those steps, installation seems to work fine.</p>
+<div class="highlight"><pre><span></span><code>$ ./install_azure_sphere_sdk.sh
+logname: brak nazwy użytkownika
+Downloading Azure Sphere SDK tarball from <span class="s1">&#39;https://aka.ms/AzureSphereSDKDownload/Linux&#39;</span>...
+Installing Azure Sphere SDK version <span class="m">20</span>.11.0.58388.
+Validating signature.
+The SDK tarball signature is valid. The fingerprint of the key used is:
+
+    Odcisk klucza głównego: BC52 <span class="m">8686</span> B50D 79E3 39D3  721C EB3E 94AD BE12 29CF
+
+Please check that this fingerprint matches the Microsoft GPG public key fingerprint shown on https://aka.ms/AzureSphereSDKVerification/Linux before proceeding. Do not proceed <span class="k">if</span> these values <span class="k">do</span> not match.
+Proceed with installation? <span class="o">(</span>Y/N<span class="o">)</span> y
+By proceeding with this installation you agree to the license terms available at https://aka.ms/AzureSphereSDKLicense/Linux and which will be installed to /opt/azurespheresdk. Proceed? <span class="o">(</span>Y/N<span class="o">)</span> y
+Installing SDK files.
+Installing toolchain version <span class="s1">&#39;5&#39;</span>.
+Installing toolchain version <span class="s1">&#39;6&#39;</span>.
+Installing toolchain version <span class="s1">&#39;7&#39;</span>.
+Installing toolchain version <span class="s1">&#39;7+Beta2010&#39;</span>.
+Installing CLI v2 <span class="o">(</span>Beta<span class="o">)</span>.
+This release contains the new azsphere CLI v2 <span class="o">(</span>Beta<span class="o">)</span>, which adds new functionality including autocompletion of commands, scriptable output, browser-based authentication, and simplified object identification.
+
+Choose <span class="s1">&#39;Yes&#39;</span> to use the CLI v2 <span class="o">(</span>Beta<span class="o">)</span> as your default CLI. The classic CLI will remain available as <span class="s1">&#39;azsphere_v1&#39;</span>. If you choose <span class="s1">&#39;No&#39;</span>, you can still try the azsphere CLI v2 <span class="o">(</span>Beta<span class="o">)</span> using <span class="s1">&#39;azsphere_v2&#39;</span>. See https://aka.ms/AzureSphereLinuxCLIversion <span class="k">for</span> more details.
+Do you want to use the new azsphere CLI v2 <span class="o">(</span>Beta<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span> y
+SDK installed to <span class="s1">&#39;/opt/azurespheresdk&#39;</span>.
+Some device operations require root permissions, or permissions granted by a udev rule.
+Set up the default udev rule and group <span class="o">(</span>azsphere<span class="o">)</span>? <span class="o">(</span>Y/N<span class="o">)</span> y
+WARN: Could not determine current user: please add yourself to the <span class="s1">&#39;azsphere&#39;</span> group once this install has finished.
+Default udev rule <span class="nb">set</span> up complete. You will need to reboot your machine <span class="k">for</span> these changes to take effect.
+Add the Azure Sphere CLI and device connection script to the PATH <span class="k">for</span> all users <span class="o">(</span>this will add a file to /etc/profile.d/<span class="o">)</span>? <span class="o">(</span>Y/N<span class="o">)</span> y
+Azure Sphere CLI and device connection script added to PATH <span class="k">for</span> all users. You will need to restart your user session <span class="k">for</span> this change to take effect.
+Azure Sphere SDK installation complete. Visit https://aka.ms/AzureSphereSDK <span class="k">for</span> documentation and samples.
+</code></pre></div>
+
+
+<p>Since <code>logname</code> was not able to get my username, I had to add my user to <code>azsphere</code> group manually (as advised).</p>
+<div class="highlight"><pre><span></span><code>sudo usermod -a -G azsphere &lt;your_linux_username_here&gt;
+sudo apt install cmake ninja-build
+</code></pre></div>
+
+
+<p>Reboot PC and see if everything works:</p>
+<div class="highlight"><pre><span></span><code>$ azure
+
+  ___                       _____       _
+ / _ <span class="se">\ </span>                    /  ___<span class="p">|</span>     <span class="p">|</span> <span class="p">|</span>
+/ /_<span class="se">\ \_</span>____   _ _ __ ___  <span class="se">\ </span><span class="sb">`</span>--. _ __ <span class="p">|</span> <span class="p">|</span>__   ___ _ __ ___
+<span class="p">|</span>  _  <span class="p">|</span>_  / <span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="s1">&#39;__/ _ \  `--. \ &#39;</span>_ <span class="se">\|</span> <span class="s1">&#39;_ \ / _ \ &#39;</span>__/ _ <span class="se">\</span>
+<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="p">|</span>/ /<span class="p">|</span> <span class="p">|</span>_<span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="p">|</span>  __/ /<span class="se">\_</span>_/ / <span class="p">|</span>_<span class="o">)</span> <span class="p">|</span> <span class="p">|</span> <span class="p">|</span> <span class="p">|</span>  __/ <span class="p">|</span> <span class="p">|</span>  __/
+<span class="se">\_</span><span class="p">|</span> <span class="p">|</span>_/___<span class="p">|</span><span class="se">\_</span>_,_<span class="p">|</span>_<span class="p">|</span>  <span class="se">\_</span>__<span class="p">|</span> <span class="se">\_</span>___/<span class="p">|</span> .__/<span class="p">|</span>_<span class="p">|</span> <span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>__<span class="p">|</span>_<span class="p">|</span>  <span class="se">\_</span>__<span class="p">|</span>
+                                 <span class="p">|</span> <span class="p">|</span>
+                                 <span class="p">|</span>_<span class="p">|</span>
+
+Welcome to the Azure Sphere CLI v2 Beta!
+
+Here are the base commands:
+
+    ca-certificate      : Manage certificate authority <span class="o">(</span>CA<span class="o">)</span> certificates <span class="k">for</span> the current Azure
+                         Sphere tenant.
+    device              : Manage devices.
+    device-group        : Manage device groups in your Azure Sphere tenant.
+    feedback            : Send feedback to the Azure Sphere CLI Team!
+    hardware-definition : Manage hardware definitions.
+    image               : Manage images in your Azure Sphere tenant.
+    image-package       : Manage image packaging.
+    login               : Log in to the Azure Sphere Security Service.
+    <span class="nb">logout</span>              : Log out from the Azure Sphere Security Service.
+    product             : Manage products in your Azure Sphere tenant.
+    register-user       : Register a new user to the Azure Sphere Security Service.
+    role                : Manage Azure Sphere roles.
+    show-user           : Show information about the logged in Azure Sphere user.
+    show-version        : Show the version of the SDK.
+    tenant              : Manage Azure Sphere tenants.
+</code></pre></div>
+
+
+<p>Now we are ready to connect target and start working.</p>
+<h4 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.element14.com/community/community/designcenter/azure-sphere-starter-kits">Azure Sphere Starter Kit</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure-sphere/install/install-sdk-linux?pivots=vs-code-linux">Quickstart: Install the Azure Sphere SDK for Linux</a></li>
+<li><a href="https://github.com/f4exb/sdrangel/issues/524">GitHub issue</a></li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../tag/azure-sphere.html">Azure Sphere</a>
+      <a href="../../../tag/iot.html">IoT</a>
+      <a href="../../../tag/sdk.html">SDK</a>
+      <a href="../../../tag/linux.html">Linux</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Embedded Stuff ",
+  "url" : "../../..",
+  "image": "",
+  "description": "Flex - The minimalist Pelican theme."
+}
+</script>
+
+
+</body>
+</html>

@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/all.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2020-12-31T12:15:00+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Links dump 1: PSM I exam preparations</title><link href="https://marek-gaw.github.io/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html" rel="alternate"></link><published>2020-12-31T12:15:00+01:00</published><updated>2020-12-31T12:15:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-12-31:/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html</id><summary type="html">&lt;p&gt;Links dump 1: materials and tips for PSM 1 exam.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;rsquo;m in the middle of PSM 1 exam preparations. Here is a list of links I found valuable while preparing.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Embedded Stuff</title><link href="https://marek-gaw.github.io/" rel="alternate"></link><link href="https://marek-gaw.github.io/feeds/all.atom.xml" rel="self"></link><id>https://marek-gaw.github.io/</id><updated>2021-01-27T20:20:00+01:00</updated><subtitle>Embedded, Linux, Cloud, IoT, Automation</subtitle><entry><title>Azure Sphere: SDK installation on Linux (Mint 19.3 or Ubuntu 18.04 LTS)</title><link href="https://marek-gaw.github.io/blog/2021/01/azure-sphere:-sdk-installation-on-linux-(mint-19.3-or-ubuntu-18.04-lts).html" rel="alternate"></link><published>2021-01-27T17:18:00+01:00</published><updated>2021-01-27T20:20:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2021-01-27:/blog/2021/01/azure-sphere:-sdk-installation-on-linux-(mint-19.3-or-ubuntu-18.04-lts).html</id><summary type="html">&lt;p&gt;Azure Sphere SDK installation on Linux&lt;/p&gt;</summary><content type="html">&lt;p&gt;Finally I got my &lt;a href="https://www.element14.com/community/community/designcenter/azure-sphere-starter-kits"&gt;Azure Sphere Starter Kit&lt;/a&gt; and I started to prepare my development environment. It seems that Microsoft has everything prepared, so installation of SDK is pretty easy and automated.&lt;/p&gt;
+&lt;p&gt;My OS is Linux Mint 19.3 based on Ubuntu 18.04 LTS. Steps shown below are more or less the same as described in &lt;a href="https://docs.microsoft.com/en-us/azure-sphere/install/install-sdk-linux?pivots=vs-code-linux"&gt;Official documentation&lt;/a&gt; with some comments.&lt;/p&gt;
+&lt;p&gt;First, let&amp;rsquo;s refresh state of repositories and install required tooling.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt update
+sudo apt-get install -y net-tools curl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next step is to download script, which will download SDK and install it in &lt;code&gt;/opt/azuresphere&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Download installer script&lt;/span&gt;
+wget --show-progress -O install_azure_sphere_sdk_2011.tar.gz https://aka.ms/AzureSphereSDKInstall/Linux
+
+&lt;span class="c1"&gt;# Problem that I encountered: missing dependencies&lt;/span&gt;
+$ ./install_azure_sphere_sdk.sh
+
+logname: brak nazwy użytkownika
+ERROR: Required package &lt;span class="s1"&gt;&amp;#39;libgcc-s1&amp;#39;&lt;/span&gt; missing.
+ERROR: Required package check failed. Please install missing packages and retry:
+    sudo apt-get install -y libgcc-s1
+Azure Sphere SDK installation cancelled.
+
+sudo apt-get install -y libgcc-s1
+
+Czytanie list pakietów... Gotowe
+Budowanie drzewa zależności       
+Odczyt informacji o stanie... Gotowe
+E: Nie udało się odnaleźć pakietu libgcc-s1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It seems strange: there is library libgcc-s1 wich is required, but it seems that default set of repositories for Mint/Ubuntu 18.04 does not contain it.&lt;/p&gt;
+&lt;p&gt;After a couple of minutes I found &lt;a href="https://github.com/f4exb/sdrangel/issues/524"&gt;this GH issue&lt;/a&gt; which pointed out that GCC 10 has to be installed. I dobut if this solution is optimal, but I wanted to quickly overcome the problem.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt-get install software-properties-common
+sudo apt-get update
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt install gcc-10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After those steps, installation seems to work fine.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ ./install_azure_sphere_sdk.sh
+logname: brak nazwy użytkownika
+Downloading Azure Sphere SDK tarball from &lt;span class="s1"&gt;&amp;#39;https://aka.ms/AzureSphereSDKDownload/Linux&amp;#39;&lt;/span&gt;...
+Installing Azure Sphere SDK version &lt;span class="m"&gt;20&lt;/span&gt;.11.0.58388.
+Validating signature.
+The SDK tarball signature is valid. The fingerprint of the key used is:
+
+    Odcisk klucza głównego: BC52 &lt;span class="m"&gt;8686&lt;/span&gt; B50D 79E3 39D3  721C EB3E 94AD BE12 29CF
+
+Please check that this fingerprint matches the Microsoft GPG public key fingerprint shown on https://aka.ms/AzureSphereSDKVerification/Linux before proceeding. Do not proceed &lt;span class="k"&gt;if&lt;/span&gt; these values &lt;span class="k"&gt;do&lt;/span&gt; not match.
+Proceed with installation? &lt;span class="o"&gt;(&lt;/span&gt;Y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+By proceeding with this installation you agree to the license terms available at https://aka.ms/AzureSphereSDKLicense/Linux and which will be installed to /opt/azurespheresdk. Proceed? &lt;span class="o"&gt;(&lt;/span&gt;Y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Installing SDK files.
+Installing toolchain version &lt;span class="s1"&gt;&amp;#39;5&amp;#39;&lt;/span&gt;.
+Installing toolchain version &lt;span class="s1"&gt;&amp;#39;6&amp;#39;&lt;/span&gt;.
+Installing toolchain version &lt;span class="s1"&gt;&amp;#39;7&amp;#39;&lt;/span&gt;.
+Installing toolchain version &lt;span class="s1"&gt;&amp;#39;7+Beta2010&amp;#39;&lt;/span&gt;.
+Installing CLI v2 &lt;span class="o"&gt;(&lt;/span&gt;Beta&lt;span class="o"&gt;)&lt;/span&gt;.
+This release contains the new azsphere CLI v2 &lt;span class="o"&gt;(&lt;/span&gt;Beta&lt;span class="o"&gt;)&lt;/span&gt;, which adds new functionality including autocompletion of commands, scriptable output, browser-based authentication, and simplified object identification.
+
+Choose &lt;span class="s1"&gt;&amp;#39;Yes&amp;#39;&lt;/span&gt; to use the CLI v2 &lt;span class="o"&gt;(&lt;/span&gt;Beta&lt;span class="o"&gt;)&lt;/span&gt; as your default CLI. The classic CLI will remain available as &lt;span class="s1"&gt;&amp;#39;azsphere_v1&amp;#39;&lt;/span&gt;. If you choose &lt;span class="s1"&gt;&amp;#39;No&amp;#39;&lt;/span&gt;, you can still try the azsphere CLI v2 &lt;span class="o"&gt;(&lt;/span&gt;Beta&lt;span class="o"&gt;)&lt;/span&gt; using &lt;span class="s1"&gt;&amp;#39;azsphere_v2&amp;#39;&lt;/span&gt;. See https://aka.ms/AzureSphereLinuxCLIversion &lt;span class="k"&gt;for&lt;/span&gt; more details.
+Do you want to use the new azsphere CLI v2 &lt;span class="o"&gt;(&lt;/span&gt;Beta&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;Y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+SDK installed to &lt;span class="s1"&gt;&amp;#39;/opt/azurespheresdk&amp;#39;&lt;/span&gt;.
+Some device operations require root permissions, or permissions granted by a udev rule.
+Set up the default udev rule and group &lt;span class="o"&gt;(&lt;/span&gt;azsphere&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;Y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+WARN: Could not determine current user: please add yourself to the &lt;span class="s1"&gt;&amp;#39;azsphere&amp;#39;&lt;/span&gt; group once this install has finished.
+Default udev rule &lt;span class="nb"&gt;set&lt;/span&gt; up complete. You will need to reboot your machine &lt;span class="k"&gt;for&lt;/span&gt; these changes to take effect.
+Add the Azure Sphere CLI and device connection script to the PATH &lt;span class="k"&gt;for&lt;/span&gt; all users &lt;span class="o"&gt;(&lt;/span&gt;this will add a file to /etc/profile.d/&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;Y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Azure Sphere CLI and device connection script added to PATH &lt;span class="k"&gt;for&lt;/span&gt; all users. You will need to restart your user session &lt;span class="k"&gt;for&lt;/span&gt; this change to take effect.
+Azure Sphere SDK installation complete. Visit https://aka.ms/AzureSphereSDK &lt;span class="k"&gt;for&lt;/span&gt; documentation and samples.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since &lt;code&gt;logname&lt;/code&gt; was not able to get my username, I had to add my user to &lt;code&gt;azsphere&lt;/code&gt; group manually (as advised).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo usermod -a -G azsphere &amp;lt;your_linux_username_here&amp;gt;
+sudo apt install cmake ninja-build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reboot PC and see if everything works:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ azure
+
+  ___                       _____       _
+ / _ &lt;span class="se"&gt;\ &lt;/span&gt;                    /  ___&lt;span class="p"&gt;|&lt;/span&gt;     &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
+/ /_&lt;span class="se"&gt;\ \_&lt;/span&gt;____   _ _ __ ___  &lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;--. _ __ &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;__   ___ _ __ ___
+&lt;span class="p"&gt;|&lt;/span&gt;  _  &lt;span class="p"&gt;|&lt;/span&gt;_  / &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__/ _ \  `--. \ &amp;#39;&lt;/span&gt;_ &lt;span class="se"&gt;\|&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;_ \ / _ \ &amp;#39;&lt;/span&gt;__/ _ &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;/ /&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  __/ /&lt;span class="se"&gt;\_&lt;/span&gt;_/ / &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  __/ &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;  __/
+&lt;span class="se"&gt;\_&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;_/___&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\_&lt;/span&gt;_,_&lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="se"&gt;\_&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\_&lt;/span&gt;___/&lt;span class="p"&gt;|&lt;/span&gt; .__/&lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\_&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;  &lt;span class="se"&gt;\_&lt;/span&gt;__&lt;span class="p"&gt;|&lt;/span&gt;
+                                 &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
+                                 &lt;span class="p"&gt;|&lt;/span&gt;_&lt;span class="p"&gt;|&lt;/span&gt;
+
+Welcome to the Azure Sphere CLI v2 Beta!
+
+Here are the base commands:
+
+    ca-certificate      : Manage certificate authority &lt;span class="o"&gt;(&lt;/span&gt;CA&lt;span class="o"&gt;)&lt;/span&gt; certificates &lt;span class="k"&gt;for&lt;/span&gt; the current Azure
+                         Sphere tenant.
+    device              : Manage devices.
+    device-group        : Manage device groups in your Azure Sphere tenant.
+    feedback            : Send feedback to the Azure Sphere CLI Team!
+    hardware-definition : Manage hardware definitions.
+    image               : Manage images in your Azure Sphere tenant.
+    image-package       : Manage image packaging.
+    login               : Log in to the Azure Sphere Security Service.
+    &lt;span class="nb"&gt;logout&lt;/span&gt;              : Log out from the Azure Sphere Security Service.
+    product             : Manage products in your Azure Sphere tenant.
+    register-user       : Register a new user to the Azure Sphere Security Service.
+    role                : Manage Azure Sphere roles.
+    show-user           : Show information about the logged in Azure Sphere user.
+    show-version        : Show the version of the SDK.
+    tenant              : Manage Azure Sphere tenants.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we are ready to connect target and start working.&lt;/p&gt;
+&lt;h4 id="references"&gt;References&lt;a class="headerlink" href="#references" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.element14.com/community/community/designcenter/azure-sphere-starter-kits"&gt;Azure Sphere Starter Kit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure-sphere/install/install-sdk-linux?pivots=vs-code-linux"&gt;Quickstart: Install the Azure Sphere SDK for Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/f4exb/sdrangel/issues/524"&gt;GitHub issue&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Embedded"></category><category term="Azure Sphere"></category><category term="IoT"></category><category term="SDK"></category><category term="Linux"></category></entry><entry><title>Links dump 1: PSM I exam preparations</title><link href="https://marek-gaw.github.io/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html" rel="alternate"></link><published>2020-12-31T12:15:00+01:00</published><updated>2020-12-31T12:15:00+01:00</updated><author><name>Marek Gawryszewski</name></author><id>tag:marek-gaw.github.io,2020-12-31:/blog/2020/12/links-dump-1:-psm-i-exam-preparations.html</id><summary type="html">&lt;p&gt;Links dump 1: materials and tips for PSM 1 exam.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;rsquo;m in the middle of PSM 1 exam preparations. Here is a list of links I found valuable while preparing.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.scrum.org/open-assessments/scrum-open"&gt;scrum.org - Open Assesment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.scrumguides.org/scrum-guide-2017.html"&gt;The 2017 Scrum GuideTM&lt;/a&gt;&lt;/li&gt;
